@@ -158,7 +158,7 @@ function PageNav({
           />
         </div>
 
-        <MobileNav isOpen={false} t={t} />
+        <MobileNav isOpen={isOpenMobileMenu} t={t} />
       </div>
     </nav>
   );
