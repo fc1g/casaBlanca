@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav .active {
+    @apply text-primary-800 dark:text-primary-300;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply rounded-full px-3 py-2 transition duration-300 sm:px-6 sm:py-3 sm:text-xl md:text-2xl;
+  }
+}
