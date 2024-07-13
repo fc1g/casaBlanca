@@ -29,5 +29,41 @@
     }
   },
 
+  "homepage": {
+    "title": {
+      "firstPart": "Sprawiamy, że Twoje",
+      "vacation": "wakacje",
+      "lastPart": "są lepsze"
+    },
+    "subtitle": "Wynajmij kawałek Hiszpanii: Twoje idealne mieszkanie czeka.",
+    "btn": "Więcej info",
+    "testimonials": {
+      "kuba": {
+        "title": "Dom bardzo dobrze utrzymany",
+        "text": "Gorąco polecam, świetne miejsce, zawiera wszystkie niezbędne rzeczy do pobytu z dzieckiem! Bardzo miły i szybki kontakt z właścicielami, którzy zaproponują i pomogą rozwiązać każdy możliwy problem.\"",
+        "userName": "Kuba",
+        "imgAltText": ""
+      },
+      "monika": {
+        "title": "Nowy, luksusowo urządzony dom",
+        "text": "Gorąco polecam wakacje w tym pięknym domu. Urokliwe miasteczko, plaża i wiele aktywności wodnych. Doskonałe miejsce do relaksu i oderwania się od codziennego życia.\"",
+        "userName": "Monika",
+        "imgAltText": ""
+      },
+      "nik": {
+        "title": "Dosłownie wszystko, czego potrzebujesz",
+        "text": "Okolica jest cicha. Wiele restauracji. Bardzo pomocny personel. Właściciel jest do dogadania we wszystkich sprawach. Pani Anita bardzo pomocna na miejscu, zawsze możesz poprosić o pomoc.\"",
+        "userName": "Nik",
+        "imgAltText": ""
+      },
+      "adam": {
+        "title": "Wspaniałe miejsce na wakacje",
+        "text": "Mieszka się wygodnie, wygodnie, są dwa łazienki, jest internet, no i jest ciepły basen, blisko rynki, blisko morze, jest miejsce na zaparkowanie samochodu. Polecam\"",
+        "userName": "Adam",
+        "imgAltText": ""
+      }
+    }
+  },
+
   "errorMessage": "Już pracujemy nad rozwiązaniem problemu."
 }

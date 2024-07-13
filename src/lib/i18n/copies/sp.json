@@ -29,5 +29,41 @@
     }
   },
 
+  "homepage": {
+    "title": {
+      "firstPart": "Hacemos que tus",
+      "vacation": "vacaciones",
+      "lastPart": "mejores"
+    },
+    "subtitle": "Alquila un pedazo de España: Tu hogar ideal te espera.",
+    "btn": "Más info",
+    "testimonials": {
+      "kuba": {
+        "title": "Casa muy bien mantenida",
+        "text": "Muy recomendable, gran lugar, incluye todas las cosas necesarias para alojarse con un niño. Contacto muy agradable y rápido con los propietarios, quienes sugerirán y ayudarán a resolver cualquier problema posible.\"",
+        "userName": "Kuba",
+        "imgAltText": ""
+      },
+      "monika": {
+        "title": "Casa nueva y lujosamente amueblada",
+        "text": "Recomiendo encarecidamente unas vacaciones en esta hermosa casa. Encantador pueblo, playa y muchas actividades acuáticas. Lugar perfecto para relajarse y escapar de la vida cotidiana.\"",
+        "userName": "Monika",
+        "imgAltText": ""
+      },
+      "nik": {
+        "title": "Literalmente todo lo que necesitas",
+        "text": "El vecindario es tranquilo. Hay muchos restaurantes. El personal es muy servicial. El propietario se lleva bien en todos los temas. La Sra. Anita es muy servicial en el lugar, siempre puedes pedir ayuda.\"",
+        "userName": "Nik",
+        "imgAltText": ""
+      },
+      "adam": {
+        "title": "Un lugar excelente para vacaciones",
+        "text": "Se vive cómodamente, convenientemente, hay dos baños, hay internet, además hay una piscina climatizada, cerca de mercados, cerca del mar, hay lugar para estacionar un auto.\"",
+        "userName": "Adam",
+        "imgAltText": ""
+      }
+    }
+  },
+
   "errorMessage": "Ya estamos trabajando para resolver el problema."
 }

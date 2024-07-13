@@ -29,5 +29,44 @@
     }
   },
 
+  "homepage": {
+    "title": {
+      "firstPart": "We make your",
+      "vacation": "vacation",
+      "lastPart": "better"
+    },
+    "subtitle": "Rent a Slice of Spain: Your Ideal Home Awaits",
+    "btn": "More info",
+    "testimonials": {
+      "title": "Our testimonials",
+      "subtitle": "Check out our testimonials from our Facebook page",
+      "btn": "Show more...",
+      "kuba": {
+        "title": "House very well maintained",
+        "text": "Highly recommend, great place, includes all the necessary things to stay with a child! Very nice and quick contact with the owners, who will suggest and help solve any possible problem.\"",
+        "userName": "Kuba",
+        "imgAltText": ""
+      },
+      "monika": {
+        "title": "New, luxuriously furnished house",
+        "text": "I highly recommend a vacation in this beautiful house. Charming town, beach, and plenty of water activities. Perfect place to relax and get away from everyday life.\"",
+        "userName": "Monika",
+        "imgAltText": ""
+      },
+      "nik": {
+        "title": "Literally everything you need",
+        "text": "The neighborhood is quiet. Lots of restaurants. Very helpful staff. The owner to get along in every subject. Ms. Anita very helpful on site you can always ask for help.\"",
+        "userName": "Nik",
+        "imgAltText": ""
+      },
+      "adam": {
+        "title": "A great place for vacation",
+        "text": "You live comfortably, conveniently, two bathrooms, there is internet, well, and there is a warm pool, close to markets, close to the sea, there is a place to park a car.\"",
+        "userName": "Adam",
+        "imgAltText": ""
+      }
+    }
+  },
+
   "errorMessage": "We are already working to solve the problem."
 }
