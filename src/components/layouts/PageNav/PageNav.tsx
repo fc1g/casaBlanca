@@ -122,7 +122,6 @@ function PageNav({
                   {currLang === LOCALS.EN && t('langList.english.text')}
                   {currLang === LOCALS.PL && t('langList.polish.text')}
                   {currLang === LOCALS.SP && t('langList.spanish.text')}
-                  setIsOpenLangMenu
                 </span>
               </div>
             </button>
