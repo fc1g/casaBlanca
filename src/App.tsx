@@ -4,13 +4,15 @@ import './lib/i18n/i18n';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import NotFound from './pages/NotFound';
+import Homepage from './pages/Homepage/Homepage';
 
 export function App() {
   const { t } = useTranslation();
 
   return (
     <Routes>
-      <Route index element={<h1>{'Hello world'}</h1>} />
+      <Route index element={<Homepage t={t} />} />
+
       <Route path="*" element={<NotFound t={t} />} />
     </Routes>
   );

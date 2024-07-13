@@ -1,1 +1,33 @@
-{}
+{
+  "page": {
+    "navigation": {
+      "home": "Casa",
+      "about": "Acerca de",
+      "vicinity": "Vecindad",
+      "contacts": "Contactos"
+    },
+    "copyrights": "Todos los derechos reservados. Construido con",
+    "notFound": {
+      "back": "Volver a la página principal",
+      "missing": "Falta algo.",
+      "info": "Lo sentimos, no podemos encontrar esa página. Encontrarás mucho para explorar en la página principal."
+    }
+  },
+
+  "langList": {
+    "english": {
+      "text": "Inglés",
+      "imgAltText": ""
+    },
+    "polish": {
+      "text": "Polaco",
+      "imgAltText": ""
+    },
+    "spanish": {
+      "text": "Español",
+      "imgAltText": ""
+    }
+  },
+
+  "errorMessage": "Ya estamos trabajando para resolver el problema."
+}

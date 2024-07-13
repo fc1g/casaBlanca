@@ -1,1 +1,33 @@
-{}
+{
+  "page": {
+    "navigation": {
+      "home": "Dom",
+      "about": "O nas",
+      "vicinity": "Okolica",
+      "contacts": "Kontakty"
+    },
+    "copyrights": "Wszelkie prawa zastrzeżone. Zbudowany przy użyciu",
+    "notFound": {
+      "back": "Powrót na stronę główną",
+      "missing": "Czegoś brakuje.",
+      "info": "Przepraszamy, nie możemy znaleźć tej strony. Na stronie głównej znajdziesz wiele do odkrycia."
+    }
+  },
+
+  "langList": {
+    "english": {
+      "text": "Angielski",
+      "imgAltText": ""
+    },
+    "polish": {
+      "text": "Polski",
+      "imgAltText": ""
+    },
+    "spanish": {
+      "text": "Hiszpański",
+      "imgAltText": ""
+    }
+  },
+
+  "errorMessage": "Już pracujemy nad rozwiązaniem problemu."
+}

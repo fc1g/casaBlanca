@@ -1,1 +1,33 @@
-{}
+{
+  "page": {
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "vicinity": "Vicinity",
+      "contacts": "Contacts"
+    },
+    "copyrights": "All Rights Reserverd. Built with",
+    "notFound": {
+      "back": "Back to Homepage",
+      "missing": "Something's missing.",
+      "info": "Sorry, we can't find that page. You'll find lots to explore on the home page."
+    }
+  },
+
+  "langList": {
+    "english": {
+      "text": "English",
+      "imgAltText": ""
+    },
+    "polish": {
+      "text": "Polish",
+      "imgAltText": ""
+    },
+    "spanish": {
+      "text": "Spanish",
+      "imgAltText": ""
+    }
+  },
+
+  "errorMessage": "We are already working to solve the problem."
+}
