@@ -1,6 +1,7 @@
-import Hero from '../../components/layouts/Hero/Hero';
+import Hero from './components/Hero/Hero';
 import Page from '../../components/layouts/Page/Page';
 import TestimonialsList from '../../components/layouts/TestimonialsList/TestimonialsList';
+
 import T from '../../types/T';
 
 function Homepage({ t }: T) {

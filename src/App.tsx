@@ -5,6 +5,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import NotFound from './pages/NotFound';
 import Homepage from './pages/Homepage/Homepage';
+import About from './pages/About/About';
+import Vicinity from './pages/Vicinity/Vicinity';
+import Contacts from './pages/Contacts/Contacts';
+import Place from './components/layouts/Place/Place';
 
 export function App() {
   const { t } = useTranslation();
@@ -12,6 +16,14 @@ export function App() {
   return (
     <Routes>
       <Route index element={<Homepage t={t} />} />
+
+      <Route path="about" element={<About t={t} />} />
+
+      <Route path="vicinity" element={<Vicinity t={t} />} />
+
+      <Route path="place/:id" element={<Place t={t} />} />
+
+      <Route path="cta" element={<Contacts t={t} />} />
 
       <Route path="*" element={<NotFound t={t} />} />
     </Routes>

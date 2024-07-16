@@ -11,11 +11,6 @@ export default interface VicinityPlace {
       pl: string;
       sp: string;
     };
-    briefInfo: {
-      eng: string;
-      pl: string;
-      sp: string;
-    };
     imgAlt: {
       eng: string;
       pl: string;

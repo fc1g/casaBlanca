@@ -1,4 +1,4 @@
-export default interface BookedDates {
+export default interface BookedDate {
   _id: string;
   initialDate: string;
   deadlineDate: string;

@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
-import T from '../../../types/T';
+import Btn from '../../../../components/Btn/Btn';
 
-import bg from '../../../assets/images/desktop/terasaEnter.webp';
-import Btn from '../../Btn/Btn';
+import T from '../../../../types/T';
+
+import bg from '../../../../assets/images/desktop/terasaEnter.webp';
 
 function Hero({ t }: T) {
   return (

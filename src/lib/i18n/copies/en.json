@@ -68,5 +68,136 @@
     }
   },
 
+  "about": {
+    "title": "Information about the house with photos",
+    "infoBtn": {
+      "house": "House",
+      "vicinity": "Vicinity",
+      "rentInfo": "Rent info"
+    },
+    "infoText": {
+      "house": {
+        "firstPart": "The house has everything you need for a carefree vacation. There are three bedrooms (for 8 people), two bathrooms, a huge and spacious terrace, and a heated swimming pool. Even in winter, you can relax and swim in water with a temperature of 30 degrees.",
+        "secondPart": "The house has all the necessary equipment. If you have a small child, there are toys, strollers, a high chair, and a bottle warmer for them. Unfortunately, we do not allow pets."
+      },
+      "vicinity": {
+        "firstPart": "Our beautiful house is in the well-developed town of San Pedro del Pinatar. It offers everything for an unforgettable vacation, with shopping centers, cafes, restaurants, parks, and the beach all within walking distance. Information about nearby attractions is available below.",
+        "secondPart": "There are many parking spaces near the house. The nearest airports are Alicante (1 hour away) and Murcia (36 minutes away). If you need a car, you can arrange a transfer with the Calma company."
+      },
+      "rentInfo": {
+        "firstPart": "It's worth mentioning that we are on both Booking.com and Airbnb. If you don't feel confident, you can book the property through these two popular services. However, to save money, feel free to book directly with us by sending a message or giving us a call to arrange the dates.",
+        "secondPart": "Once you are ready to make a reservation, please contact Mrs. Anita Violleta Kołodziejczyk. She is responsible for your booking and will be on-site to assist you with your reservation."
+      }
+    },
+    "slider": {
+      "loungeFromOutside": "A contemporary living room featuring a white couch and table, creating a sleek and minimalist ambiance.",
+      "lounge": "A modern living room with white walls and a large television",
+      "diningRoom": "Clean and modern dining room setup with elegant furniture.",
+      "kitchen": "A well-lit kitchen with a wooden table and chairs, creating a cozy and inviting dining area.",
+      "doubleRoom": "Luxurious bedroom featuring a large bed",
+      "twinRoomDark": "Two beds in a room with a colorful wall mural. A vibrant and cozy space for relaxation and rest.",
+      "twinRoomLight": "A cozy bedroom with two beds and a stylish rug, creating a comfortable and inviting atmosphere.",
+      "bathFirst": "A luxurious bathroom with elegant marble walls and pristine white fixtures.",
+      "bathSecond": "Luxurious white bathroom featuring marble walls and floor.",
+      "terasaEnter": "A modern home with a patio and stairs leading to the entrance.",
+      "terasa": "Rooftop patio with lounge chairs and table, perfect for relaxing outdoors.",
+      "pool": "Stylish villa with swimming pool and patio, offering a serene and elegant outdoor space."
+    }
+  },
+
+  "vicinity": {
+    "title": "Places we recommend to visit",
+    "subtitle": "Must-See Destinations for Your Next Adventure"
+  },
+
+  "contacts": {
+    "title": "Booking Procedure",
+    "bookProcedure": {
+      "firstCol": {
+        "firstPart": "We are available on",
+        "secondPart": "and",
+        "thirdPart": "If you prefer, you can book through these services. To save money, contact us directly to arrange dates or for assistance with connections."
+      },
+      "secondCol": "Check the details: which airlines, departure city, and flight times. Book your dates accordingly. Without this information, standard check-in is at 16:00 and check-out at 11:00.",
+      "thirdCol": "You can always contact us after purchasing your ticket. If possible, we will try to accommodate your schedule. If you know your flight times, we will adjust the calendar to your requirements."
+    },
+    "subtitle": "How to Book Your Reservation: Step-by-Step Guide",
+    "paymentSchedule": {
+      "firstCol": "The first transfer is about 20-30% of the total amount and we expect it within 72 hours.",
+      "secondCol": "The second transfer is half of the remaining amount, due about halfway to your arrival date.",
+      "thirdCol": "The third transfer is the final installment before your arrival. To check in, the total amount must be credited to our account."
+    },
+    "accordion": {
+      "phone": "Phone",
+      "mail": "Mail",
+      "firstPart": {
+        "title": "Still have questions ? Call Ewelina Kwaśna",
+        "customeText": "Address"
+      },
+      "secondPart": {
+        "title": "For reservations, contact Anita Kolodziejczyk",
+        "customeText": "Web page"
+      },
+      "important": {
+        "firstPart": "Please be patient;",
+        "secondPart": "each of us, besides renting, has another job."
+      }
+    },
+    "calendar": {
+      "prev": "Prev month",
+      "next": "Next month"
+    },
+    "weeks": {
+      "long": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "Sunday": "Sunday"
+      },
+      "abbr": {
+        "monday": "Mon",
+        "tuesday": "Tue",
+        "wednesday": "Wed",
+        "thursday": "Thu",
+        "friday": "Fri",
+        "saturday": "Sat",
+        "Sunday": "Sun"
+      }
+    },
+    "months": {
+      "long": {
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
+      },
+      "abbr": {
+        "january": "Jan",
+        "february": "Feb",
+        "march": "Mar",
+        "april": "Apr",
+        "may": "May",
+        "june": "Jun",
+        "july": "Jul",
+        "august": "Aug",
+        "september": "Sep",
+        "october": "Oct",
+        "november": "Nov",
+        "december": "Dec"
+      }
+    }
+  },
+
   "errorMessage": "We are already working to solve the problem."
 }

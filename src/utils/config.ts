@@ -18,5 +18,4 @@ export default {
   HOUSE_COORDS: [37.8282608, -0.7899585] as [number, number],
   ZOOM: 13,
   ICON_SIZE: [38, 38] as [number, number],
-  API_URL: 'http://127.0.0.1:3715/api/v1/',
 };
