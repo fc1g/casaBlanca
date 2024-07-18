@@ -1,9 +1,9 @@
 import { Dispatch } from 'react';
-import AbsBtn from '../../AbsBtn/AbsBtn';
-import Dot from '../../Dots/Dot/Dot';
-import Dots from '../../Dots/Dots';
-import Slide from '../../../../components/Slide/Slide';
-import { Images } from '../../../../types/Images';
+import { Images } from '../../../types/Images';
+import Slide from '../../../pages/About/components/Slide/Slide';
+import AbsBtn from '../../../pages/About/components/AbsBtn/AbsBtn';
+import Dots from '../../../pages/About/components/Dots/Dots';
+import Dot from '../../../pages/About/components/Dot/Dot';
 
 interface SliderProps {
   active: number;

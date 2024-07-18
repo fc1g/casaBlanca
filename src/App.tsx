@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import './lib/i18n/i18n';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import NotFound from './pages/NotFound';
 import Homepage from './pages/Homepage/Homepage';
@@ -19,7 +19,10 @@ export function App() {
 
       <Route path="about" element={<About t={t} />} />
 
-      <Route path="vicinity" element={<Vicinity t={t} />} />
+      <Route path="vicinity" element={<Vicinity t={t} />}>
+        <Route index element={<Navigate to="?page=1" />} />
+        <Route path="?page=1" />
+      </Route>
 
       <Route path="place/:id" element={<Place t={t} />} />
 

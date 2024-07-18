@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+
 import Page from '../../components/layouts/Page/Page';
 import Chart from './components/Chart/Chart';
 import Calendar from './components/Calendar/Calendar';
@@ -9,8 +11,15 @@ import Accordion from '../../components/layouts/Accordion/Accordion';
 import T from '../../types/T';
 
 function Contacts({ t }: T) {
+  const wrapper = useRef<HTMLDivElement>(null);
+
   return (
-    <Page t={t} pageStyles="relative" logoStyles="dark:text-white text-dark">
+    <Page
+      t={t}
+      wrapper={wrapper}
+      pageStyles="relative"
+      logoStyles="dark:text-white text-dark"
+    >
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-6 lg:py-16">
         <div className="my-24 grid grid-cols-1 gap-16 md:grid-cols-2">
           <Chart t={t}>

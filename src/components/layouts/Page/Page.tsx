@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import PageNav from '../PageNav/PageNav';
 import Footer from '../Footer/Footer';
@@ -9,24 +9,23 @@ import T from '../../../types/T';
 interface PageProps extends T, Children {
   logoStyles: string;
   pageStyles?: string;
+  wrapper: React.RefObject<HTMLDivElement>;
 }
 
-function Page({ t, children, logoStyles, pageStyles }: PageProps) {
+function Page({ t, children, logoStyles, pageStyles, wrapper }: PageProps) {
   const [isOpenLangMenu, setIsOpenLangMenu] = useState(false);
-
-  const wrapper = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!wrapper.current) return;
 
-    wrapper.current.addEventListener('click', (e) => {
+    wrapper.current.addEventListener('click', e => {
       setIsOpenLangMenu(
         (e.target as HTMLButtonElement).closest('.toggleLangBtn')
           ? !isOpenLangMenu
           : isOpenLangMenu !== false && false
       );
     });
-  }, [isOpenLangMenu, wrapper]);
+  }, [setIsOpenLangMenu, isOpenLangMenu, wrapper]);
   return (
     <div
       ref={wrapper}

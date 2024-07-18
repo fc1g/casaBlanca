@@ -1,4 +1,3 @@
-import { Dispatch } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/16/solid';
 import Children from '../../types/Children';
 
@@ -6,29 +5,21 @@ interface DropDownMenuProps extends Children {
   text: string;
   className: string;
   openMenu: string;
-  setOpenMenu: Dispatch<'sort' | 'limits' | ''>;
 }
 
 function DropDownMenu({
   text,
   className,
   openMenu,
-  setOpenMenu,
   children,
 }: DropDownMenuProps) {
   return (
     <div className="relative">
       <div>
         <button
-          onClick={() =>
-            setOpenMenu(
-              openMenu === (text.toLowerCase() as 'sort' | 'limits')
-                ? ''
-                : (text.toLowerCase() as 'sort' | 'limits')
-            )
-          }
+          data-type={text.toLowerCase()}
           type="button"
-          className="group inline-flex items-center justify-center text-sm font-medium text-dark dark:text-white"
+          className="dropDownBtn group inline-flex items-center justify-center text-sm font-medium text-dark dark:text-white"
         >
           {text}
           <ChevronDownIcon className="h-4 w-4 text-lightDark group-hover:text-dark dark:text-gray-300 group-hover:dark:text-white" />

@@ -25,7 +25,7 @@ function Nav({ t }: T) {
       <li className="group">
         <NavLink
           className="px-2 transition duration-300 group-hover:text-primary-800 group-hover:dark:text-primary-300"
-          to="/vicinity"
+          to="/vicinity?page=1"
         >
           {t('page.navigation.vicinity')}
         </NavLink>

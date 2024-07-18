@@ -9,10 +9,11 @@ export default function useData<T>(url: string) {
   useEffect(() => {
     const getData = async () => {
       try {
+        setError('');
         setIsLoading(true);
 
         const res = await fetch(`${Api.URL}${url}`);
-        if (!res.ok) throw new Error();
+        if (!res.ok) throw new Error('Something went wrong!');
 
         // eslint-disable-next-line @typescript-eslint/no-shadow
         const { data } = (await res.json()) as {

@@ -33,7 +33,7 @@ function MobileNav({ isOpen, t }: MobileNavProps) {
         <li className="group block rounded px-3 py-3 md:p-0">
           <NavLink
             className="px-2 transition duration-300 group-hover:text-primary-800 group-hover:dark:text-primary-300"
-            to="/vicinity"
+            to="/vicinity?page=1"
           >
             {t('page.navigation.vicinity')}
           </NavLink>

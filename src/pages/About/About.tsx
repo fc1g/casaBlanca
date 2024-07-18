@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+
 import AboutTabs from './components/AboutTabs/AboutTabs';
 import Page from '../../components/layouts/Page/Page';
 import Slider from './components/Slider/Slider';
@@ -34,6 +36,7 @@ import poolDesktop from '../../assets/images/desktop/pool.webp';
 import poolMobile from '../../assets/images/mobile/pool.webp';
 
 function About({ t }: T) {
+  const wrapper = useRef<HTMLDivElement>(null);
   const images: Images[] = [
     {
       source: {
@@ -129,7 +132,7 @@ function About({ t }: T) {
   });
 
   return (
-    <Page logoStyles="text-transparent" t={t}>
+    <Page wrapper={wrapper} logoStyles="text-transparent" t={t}>
       <>
         <Slider
           active={activeSlide}

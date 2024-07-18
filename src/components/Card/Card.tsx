@@ -13,7 +13,7 @@ function Card({ t, data }: CardProps) {
     <div className="w-full rounded-lg border border-gray-200 bg-lightGrayish shadow dark:border-lightDark dark:bg-dark">
       <div>
         <img
-          className="w-full rounded-t-lg"
+          className="h-80 w-full rounded-t-lg object-cover object-center"
           src={data.imgSource}
           alt={data.info.imgAlt.eng}
         />
@@ -24,8 +24,7 @@ function Card({ t, data }: CardProps) {
         </h5>
 
         <p className="mb-3 font-normal text-gray-600 dark:text-gray-300">
-          Here are the biggest enterprise technology acquisitions of 2021 so
-          far, in reverse chronological order.
+          {data.info.briefInfo.eng}
         </p>
 
         <Link to={`/place/${data._id}`}>

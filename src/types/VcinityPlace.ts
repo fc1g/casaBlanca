@@ -1,6 +1,11 @@
 export default interface VicinityPlace {
   _id: string;
   info: {
+    briefInfo: {
+      eng: string;
+      pl: string;
+      sp: string;
+    };
     title: {
       eng: string;
       pl: string;
