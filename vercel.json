@@ -1,0 +1,9 @@
+{
+  "routes": [
+    { "src": "/", "dest": "/" },
+    { "src": "/about", "dest": "/" },
+    { "src": "/vicinity?page=1", "dest": "/" },
+    { "src": "cta", "dest": "/" },
+    { "src": "*", "dest": "/" }
+  ]
+}
