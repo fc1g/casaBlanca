@@ -14,7 +14,7 @@ const btnVariants = cva(
           'text-dark dark:text-white bg-white border border-gray-200 hover:bg-lightGrayish focus:z-10 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-lightDark  dark:border-gray-600 dark:hover:bg-dark',
       },
       size: {
-        default: 'px-5 py-2.5 me-2 mb-2',
+        default: 'px-6 py-3 me-2 mb-2',
       },
       defaultVariants: {
         variant: 'default',

@@ -1,6 +1,5 @@
 import Social from '../../Social/Social';
 
-// eslint-disable-next-line import/no-absolute-path
 import sprite from '/social-sprite.svg';
 
 function SocialList() {
@@ -9,14 +8,16 @@ function SocialList() {
       <Social
         href="https://www.facebook.com/people/CasaBlanca-Private-Heated-Pool/100091592920461/"
         icon={`${sprite}#icon-facebook`}
+        desc="Facebook"
       />
 
       <Social
         href="https://www.instagram.com/"
         icon={`${sprite}#icon-instagram`}
+        desc="Instagram"
       />
 
-      <Social href="https://x.com/" icon={`${sprite}#icon-x`} />
+      <Social href="https://x.com/" icon={`${sprite}#icon-x`} desc="X" />
     </ul>
   );
 }

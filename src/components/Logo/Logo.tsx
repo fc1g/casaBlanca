@@ -4,7 +4,6 @@ interface LogoProps {
   className: string;
 }
 
-/* eslint-disable no-restricted-globals */
 function Logo({ className }: LogoProps) {
   return (
     <Link to="/">

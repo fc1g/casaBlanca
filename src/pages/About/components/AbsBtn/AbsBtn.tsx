@@ -14,7 +14,7 @@ function AbsBtn({ children, position, onClick }: AbsBtnProps) {
       type="button"
       className={`group absolute ${position === 'left' ? 'left-0' : 'right-0'} top-2/4 z-30 flex -translate-y-2/4 cursor-pointer items-center justify-center px-4 focus:outline-none`}
     >
-      <span className="duration-400 dark:hover:bg-lightDark inline-flex h-10 w-10 items-center justify-center rounded-full bg-gray-300 transition hover:bg-gray-400 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-700 dark:group-focus:ring-gray-800/70">
+      <span className="duration-400 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gray-300 transition hover:bg-gray-400 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-700 dark:hover:bg-lightDark dark:group-focus:ring-gray-800/70">
         {position === 'left' && (
           <ChevronLeftIcon className="h-6 w-6 text-dark lg:h-8 lg:w-8 dark:text-white" />
         )}

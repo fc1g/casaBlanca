@@ -1,5 +1,6 @@
 import { Dispatch, useEffect, useState } from 'react';
-import { LOCALS } from '../../../lib/i18n/constants';
+import LOCALS from '../../../lib/i18n/constants';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import i18next from 'i18next';
 
 import Nav from '../../Nav/Nav';
