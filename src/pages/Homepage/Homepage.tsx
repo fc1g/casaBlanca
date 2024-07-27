@@ -1,20 +1,14 @@
-import { useRef } from 'react';
-
 import Hero from './components/Hero/Hero';
 import Page from '../../components/layouts/Page/Page';
 import TestimonialsList from '../../components/layouts/TestimonialsList/TestimonialsList';
 
-import T from '../../types/T';
-
-function Homepage({ t }: T) {
-  const wrapper = useRef<HTMLDivElement>(null);
-
+function Homepage() {
   return (
-    <Page logoStyles="text-white" t={t} wrapper={wrapper}>
+    <Page logoStyles="text-white">
       <>
-        <Hero t={t} />
+        <Hero />
 
-        <TestimonialsList t={t} />
+        <TestimonialsList />
       </>
     </Page>
   );

@@ -6,7 +6,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import LOCALS from './constants';
 import en from './copies/en.json';
 import pl from './copies/pl.json';
-import sp from './copies/sp.json';
+import es from './copies/es.json';
 
 const resources = {
   [LOCALS.EN]: {
@@ -16,7 +16,7 @@ const resources = {
     translation: pl,
   },
   [LOCALS.SP]: {
-    translation: sp,
+    translation: es,
   },
 };
 

@@ -2,10 +2,10 @@ import { useState } from 'react';
 
 import TabContent from '../../../../components/TabContent/TabContent';
 import Tab from '../../../../components/TabBtn/TabBtn';
+import useGlobal from '../../../../hooks/useGlobal';
 
-import T from '../../../../types/T';
-
-function AboutTabs({ t }: T) {
+function AboutTabs() {
+  const { t } = useGlobal()!;
   const [active, setActive] = useState(0);
 
   return (

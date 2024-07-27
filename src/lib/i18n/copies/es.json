@@ -6,12 +6,14 @@
       "vicinity": "Vecindad",
       "contacts": "Contactos"
     },
+    "hamburger": "Menú móvil",
     "copyrights": "Todos los derechos reservados. Construido con",
     "notFound": {
       "back": "Volver a la página principal",
       "missing": "Falta algo.",
       "info": "Lo sentimos, no podemos encontrar esa página. Encontrarás mucho para explorar en la página principal."
-    }
+    },
+    "loading": "Cargando"
   },
 
   "langList": {
@@ -38,6 +40,9 @@
     "subtitle": "Alquila un pedazo de España: Tu hogar ideal te espera.",
     "btn": "Más info",
     "testimonials": {
+      "title": "Nuestros testimonios",
+      "subtitle": "Consulte los testimonios de nuestra página de Facebook",
+      "btn": "Ver más...",
       "kuba": {
         "title": "Casa muy bien mantenida",
         "text": "Muy recomendable, gran lugar, incluye todas las cosas necesarias para alojarse con un niño. Contacto muy agradable y rápido con los propietarios, quienes sugerirán y ayudarán a resolver cualquier problema posible.\"",
@@ -104,7 +109,20 @@
 
   "vicinity": {
     "title": "Lugares que recomendamos visitar",
-    "subtitle": "Destinos imprescindibles para tu próxima aventura"
+    "subtitle": "Destinos imprescindibles para tu próxima aventura",
+    "sort": {
+      "low": "Distancia: Bajo a Alto",
+      "high": "Distancia: Alto a Bajo"
+    },
+    "limit": {
+      "first": "3 Elementos de la página",
+      "second": "6 Elementos de la página",
+      "third": "9 Elementos de la página"
+    },
+    "btns": {
+      "next": "Siguiente",
+      "prev": "Anterior"
+    }
   },
 
   "contacts": {
@@ -194,6 +212,10 @@
         "december": "Dec"
       }
     }
+  },
+
+  "place": {
+    "route": "Generar ruta"
   },
 
   "errorMessage": "Ya estamos trabajando para resolver el problema."

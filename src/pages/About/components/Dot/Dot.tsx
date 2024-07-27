@@ -1,8 +1,8 @@
-interface DotProps {
+type DotProps = {
   slide: number;
   active: number;
   onClick: () => void;
-}
+};
 
 function Dot({ slide, active, onClick }: DotProps) {
   return (

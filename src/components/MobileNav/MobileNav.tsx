@@ -1,12 +1,14 @@
 import { NavLink } from 'react-router-dom';
 import SocialList from '../layouts/SocialList/SocialList';
-import T from '../../types/T';
+import useGlobal from '../../hooks/useGlobal';
 
-interface MobileNavProps extends T {
+type MobileNavProps = {
   isOpen: boolean;
-}
+};
 
-function MobileNav({ isOpen, t }: MobileNavProps) {
+function MobileNav({ isOpen }: MobileNavProps) {
+  const { t } = useGlobal()!;
+
   return (
     <div
       className={`${isOpen ? 'absolute inset-x-0 top-0 z-[99999] mt-12 flex' : 'hidden'}`}

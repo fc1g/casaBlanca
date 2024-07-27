@@ -6,23 +6,18 @@ import {
   PhoneIcon,
 } from '@heroicons/react/24/solid';
 import { Dispatch } from 'react';
-import T from '../../types/T';
 import Link from '../Link/Link';
+import useGlobal from '../../hooks/useGlobal';
 
-interface AccordionItemProps extends T {
+type AccordionItemProps = {
   content: string;
   active: number | null;
   onClick: Dispatch<number | null>;
   data: number;
-}
+};
 
-function AccordionItem({
-  t,
-  content,
-  active,
-  onClick,
-  data,
-}: AccordionItemProps) {
+function AccordionItem({ content, active, onClick, data }: AccordionItemProps) {
+  const { t } = useGlobal()!;
   return (
     <>
       <h3>

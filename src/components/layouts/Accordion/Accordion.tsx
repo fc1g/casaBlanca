@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import T from '../../../types/T';
 import AccordionItem from '../../AccordionItem/AccordionItem';
 
-function Accordion({ t }: T) {
+function Accordion() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
@@ -14,7 +13,6 @@ function Accordion({ t }: T) {
           key={i}
           content={`contacts.accordion.${i === 0 ? 'firstPart' : 'secondPart'}`}
           data={i}
-          t={t}
         />
       ))}
     </>

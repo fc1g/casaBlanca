@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-interface LogoProps {
+type LogoProps = {
   className: string;
-}
+};
 
 function Logo({ className }: LogoProps) {
   return (

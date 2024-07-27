@@ -1,10 +1,10 @@
 import Link from '../Link/Link';
 
-interface SocialProps {
+type SocialProps = {
   href: string;
   icon: string;
   desc: string;
-}
+};
 
 function Social({ href, icon, desc }: SocialProps) {
   return (

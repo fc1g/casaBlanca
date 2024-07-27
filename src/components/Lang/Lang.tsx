@@ -1,12 +1,14 @@
-import T from '../../types/T';
+import useGlobal from '../../hooks/useGlobal';
 
-interface LangProps extends T {
+type LangProps = {
   src: string;
   translatePath: string;
   onClick: () => void;
-}
+};
 
-function Lang({ t, src, translatePath, onClick }: LangProps) {
+function Lang({ src, translatePath, onClick }: LangProps) {
+  const { t } = useGlobal()!;
+
   return (
     <li>
       <button

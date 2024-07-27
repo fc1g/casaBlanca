@@ -1,10 +1,12 @@
-import T from '../../types/T';
+import useGlobal from '../../hooks/useGlobal';
 
-interface ErrorMessageProps extends T {
+type ErrorMessageProps = {
   errorMessage: string;
-}
+};
 
-function ErrorMessage({ errorMessage, t }: ErrorMessageProps) {
+function ErrorMessage({ errorMessage }: ErrorMessageProps) {
+  const { t } = useGlobal()!;
+
   return (
     <section className="w-full bg-lightGrayish 2xl:container 2xl:mx-auto dark:bg-dark">
       <div className="flex h-full items-center justify-center px-4 py-8 lg:px-6 lg:py-16">

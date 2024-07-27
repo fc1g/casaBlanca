@@ -1,7 +1,7 @@
-interface TitleProps {
+type TitleProps = {
   title: string;
   subtitle: string;
-}
+};
 
 function Title({ title, subtitle }: TitleProps) {
   return (

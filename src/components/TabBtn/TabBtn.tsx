@@ -1,11 +1,11 @@
 import { Dispatch } from 'react';
 import Children from '../../types/Children';
 
-interface TabProps extends Children {
+type TabProps = {
   active: number;
   data: number;
   onClick: Dispatch<number>;
-}
+} & Children;
 
 function Tab({ children, active, onClick, data }: TabProps) {
   return (

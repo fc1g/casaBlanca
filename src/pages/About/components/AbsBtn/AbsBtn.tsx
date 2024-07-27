@@ -2,10 +2,10 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import { Dispatch } from 'react';
 import Children from '../../../../types/Children';
 
-interface AbsBtnProps extends Children {
+type AbsBtnProps = {
   position: string;
   onClick: Dispatch<number>;
-}
+} & Children;
 
 function AbsBtn({ children, position, onClick }: AbsBtnProps) {
   return (

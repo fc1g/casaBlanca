@@ -2,18 +2,22 @@ import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { Icon } from 'leaflet';
 import './LeafMap.css';
 
-import T from '../../../types/T';
-import config from '../../../utils/config';
-import VicinityPlace from '../../../types/VcinityPlace';
+import useGlobal from '../../../hooks/useGlobal';
 
 import homeMarker from '../../../assets/images/home.webp';
 import marker from '../../../assets/images/pin.webp';
 
-interface LeafMapProps extends T {
-  data: VicinityPlace;
-}
+import config from '../../../utils/config';
+import { Lang, VicinityPlace } from '../../../types/VcinityPlace';
 
-function LeafMap({ t, data }: LeafMapProps) {
+type LeafMapProps = {
+  data: Partial<VicinityPlace>;
+};
+
+function LeafMap({ data }: LeafMapProps) {
+  const { t, i18next } = useGlobal()!;
+  const currLang = i18next.language as keyof Lang;
+
   return (
     <div className="dark:brightness-75">
       <MapContainer
@@ -22,7 +26,7 @@ function LeafMap({ t, data }: LeafMapProps) {
         center={config.HOUSE_COORDS}
         zoom={
           // eslint-disable-next-line no-nested-ternary
-          data.distance > 15
+          data.distance! > 15
             ? 10
             : navigator.userAgent.includes('Mobile')
               ? 11
@@ -47,8 +51,9 @@ function LeafMap({ t, data }: LeafMapProps) {
             {t('about.infoBtn.house')}
           </Popup>
         </Marker>
+
         <Marker
-          position={data.coords}
+          position={data.coords!}
           icon={
             new Icon({
               iconUrl: marker,
@@ -57,7 +62,7 @@ function LeafMap({ t, data }: LeafMapProps) {
           }
         >
           <Popup closeOnClick={false} closeOnEscapeKey={false}>
-            {data.info.title.eng}
+            {data.info!.title[currLang]}
           </Popup>
         </Marker>
       </MapContainer>

@@ -2,38 +2,73 @@ import '@testing-library/jest-dom';
 
 import { describe, expect, it } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 
-import { WrappedApp, App } from './App';
+import { Suspense } from 'react';
+import { App } from './App';
+
+import GlobalProvider from './context/GlobalContext';
+import Loader from './components/Loader/Loader';
 
 describe('App', () => {
-  it('Renders hello world', () => {
-    // ARRANGE
-    render(<WrappedApp />);
+  it('should render notFound page if landing on a bad page', async () => {
+    /* Arrange */
+    const badRoute = '/this-route-does-not-exist';
 
-    // ACT
-
-    // EXPECT
-    expect(
-      screen.getByRole('heading', {
-        level: 1,
-      })
-    ).toHaveTextContent('Hello World');
-  });
-  it('Renders not found if invalid path', () => {
-    // ARRANGE
+    /* Act */
     render(
-      <MemoryRouter initialEntries={['/this-route-does-not-exist']}>
-        <App />
+      <MemoryRouter initialEntries={[badRoute]}>
+        <GlobalProvider>
+          <Suspense
+            fallback={
+              <div className="flex h-screen w-full items-center justify-center">
+                <Loader />
+              </div>
+            }
+          >
+            <App />
+          </Suspense>
+        </GlobalProvider>
       </MemoryRouter>
     );
-    // ACT
 
-    // EXPECT
+    /* Assert */
+    expect(screen.queryByText(/Loading/gi)).toBeInTheDocument();
+
     expect(
-      screen.getByRole('heading', {
+      await screen.findByRole('heading', {
         level: 1,
       })
-    ).toHaveTextContent('Not Found');
+    ).toHaveTextContent(/404/gi);
+  });
+
+  it('should render homepage', async () => {
+    /* Arrange */
+
+    /* Act */
+    render(
+      <BrowserRouter>
+        <GlobalProvider>
+          <Suspense
+            fallback={
+              <div className="flex h-screen w-full items-center justify-center">
+                <Loader />
+              </div>
+            }
+          >
+            <App />
+          </Suspense>
+        </GlobalProvider>
+      </BrowserRouter>
+    );
+
+    /* Assert */
+    expect(screen.queryByText(/Loading/gi)).toBeInTheDocument();
+
+    expect(
+      await screen.findByRole('heading', {
+        level: 1,
+      })
+    ).toBeInTheDocument();
   });
 });

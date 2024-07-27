@@ -1,8 +1,8 @@
 import Children from '../../../types/Children';
 
-interface LangListProps extends Children {
+type LangListProps = {
   isOpen: boolean;
-}
+} & Children;
 
 function LangList({ isOpen, children }: LangListProps) {
   return (

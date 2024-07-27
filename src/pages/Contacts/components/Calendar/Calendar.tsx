@@ -1,5 +1,5 @@
 import './Calendar.css';
-import { useState } from 'react';
+import { useEffect } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
 /* Components */
@@ -7,41 +7,37 @@ import Loader from '../../../../components/Loader/Loader';
 import ErrorMessage from '../../../../components/ErrorMessage/ErrorMessage';
 
 /* Hooks */
-import useData from '../../../../hooks/useData';
+import useCalendar from '../../../../hooks/useCalendar';
+import useGlobal from '../../../../hooks/useGlobal';
+import { REDUCER_STATE_STATUS } from '../../../../types/reducer';
 
-/* Types */
-import T from '../../../../types/T';
-import config from '../../../../utils/config';
-import BookedDates from '../../../../types/BookedDate';
+function Calendar() {
+  const { t } = useGlobal()!;
+  const {
+    getAllDates,
+    bookedDates,
+    status,
+    errorMessage,
+    month,
+    prevBtnHandler,
+    nextBtnHandler,
+    firstDayofMonth,
+    lastDateofLastMonth,
+    lastDateofMonth,
+    currYear,
+  } = useCalendar()!;
 
-function Calendar({ t }: T) {
-  const { data, isLoading, error } = useData<{
-    bookedDates: BookedDates[];
-  }>('bookedDates');
-  const [currMonth, setCurrMonth] = useState(config.CUR_DATE.getMonth());
-  const [currYear, setCurrYear] = useState(config.CUR_DATE.getFullYear());
-
-  const firstDayofMonth = new Date(currYear, currMonth, 1).getDay();
-  const lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate();
-  const lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate();
-
-  const month = config.MONTHS[currMonth].toLowerCase();
-
-  function prevBtnHandler() {
-    setCurrMonth(new Date(currYear, currMonth - 1).getMonth());
-    setCurrYear(new Date(currYear, currMonth - 1).getFullYear());
-  }
-
-  function nextBtnHandler() {
-    setCurrMonth(new Date(currYear, currMonth + 1).getMonth());
-    setCurrYear(new Date(currYear, currMonth + 1).getFullYear());
-  }
+  useEffect(() => {
+    getAllDates();
+  }, [getAllDates]);
 
   return (
     <>
-      {isLoading && <Loader />}
-      {error && <ErrorMessage errorMessage={error} t={t} />}
-      {data?.bookedDates && (
+      {status === REDUCER_STATE_STATUS.LOADING && <Loader />}
+      {status === REDUCER_STATE_STATUS.ERROR && (
+        <ErrorMessage errorMessage={errorMessage} />
+      )}
+      {bookedDates && (
         <div className="flex items-center justify-center">
           <div className="flex w-full flex-col rounded-xl border border-gray-200">
             <div className="flex items-center justify-between px-6 pb-2 pt-6">

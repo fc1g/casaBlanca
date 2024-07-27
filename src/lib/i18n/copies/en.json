@@ -6,12 +6,14 @@
       "vicinity": "Vicinity",
       "contacts": "Contacts"
     },
+    "hamburger": "Mobile menu",
     "copyrights": "All Rights Reserverd. Built with",
     "notFound": {
       "back": "Back to Homepage",
       "missing": "Something's missing.",
       "info": "Sorry, we can't find that page. You'll find lots to explore on the home page."
-    }
+    },
+    "loading": "Loading"
   },
 
   "langList": {
@@ -107,7 +109,20 @@
 
   "vicinity": {
     "title": "Places we recommend to visit",
-    "subtitle": "Must-See Destinations for Your Next Adventure"
+    "subtitle": "Must-See Destinations for Your Next Adventure",
+    "sort": {
+      "low": "Distance: Low to High",
+      "high": "Distance: High to Low"
+    },
+    "limit": {
+      "first": "3 Items on page",
+      "second": "6 Items on page",
+      "third": "9 Items on page"
+    },
+    "btns": {
+      "next": "Next",
+      "prev": "Prev"
+    }
   },
 
   "contacts": {
@@ -197,6 +212,10 @@
         "december": "Dec"
       }
     }
+  },
+
+  "place": {
+    "route": "Generate route"
   },
 
   "errorMessage": "We are already working to solve the problem."

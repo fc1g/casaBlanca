@@ -6,12 +6,14 @@
       "vicinity": "Okolica",
       "contacts": "Kontakty"
     },
+    "hamburger": "Menu mobilne",
     "copyrights": "Wszelkie prawa zastrzeżone. Zbudowany przy użyciu",
     "notFound": {
       "back": "Powrót na stronę główną",
       "missing": "Czegoś brakuje.",
       "info": "Przepraszamy, nie możemy znaleźć tej strony. Na stronie głównej znajdziesz wiele do odkrycia."
-    }
+    },
+    "loading": "Ładowanie"
   },
 
   "langList": {
@@ -38,6 +40,9 @@
     "subtitle": "Wynajmij kawałek Hiszpanii: Twoje idealne mieszkanie czeka.",
     "btn": "Więcej info",
     "testimonials": {
+      "title": "Nasze referencje",
+      "subtitle": "Sprawdź nasze referencje na naszej stronie na Facebooku",
+      "btn": "Pokaż więcej...",
       "kuba": {
         "title": "Dom bardzo dobrze utrzymany",
         "text": "Gorąco polecam, świetne miejsce, zawiera wszystkie niezbędne rzeczy do pobytu z dzieckiem! Bardzo miły i szybki kontakt z właścicielami, którzy zaproponują i pomogą rozwiązać każdy możliwy problem.\"",
@@ -104,7 +109,20 @@
 
   "vicinity": {
     "title": "Miejsca, które polecamy odwiedzić",
-    "subtitle": "Miejsca, które musisz zobaczyć podczas swojej następnej przygody"
+    "subtitle": "Miejsca, które musisz zobaczyć podczas swojej następnej przygody",
+    "sort": {
+      "low": "Odległość: Niski do Wysokiego",
+      "high": "Odległość: Od wysokiego do niskiego"
+    },
+    "limit": {
+      "first": "3 Pozycje na stronie",
+      "second": "6 Pozycje na stronie",
+      "third": "9 Pozycje na stronie"
+    },
+    "btns": {
+      "next": "Następny",
+      "prev": "Poprzedni"
+    }
   },
 
   "contacts": {
@@ -194,6 +212,10 @@
         "december": "Dec"
       }
     }
+  },
+
+  "place": {
+    "route": "Generowanie trasy"
   },
 
   "errorMessage": "Już pracujemy nad rozwiązaniem problemu."

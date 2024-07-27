@@ -1,9 +1,9 @@
 import { Source } from '../../../../types/Images';
 
-interface SlideProps extends Source {
+type SlideProps = {
   alt: string;
   percentage: number;
-}
+} & Source;
 
 function Slide({ source, alt, percentage }: SlideProps) {
   return (

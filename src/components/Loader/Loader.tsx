@@ -1,4 +1,7 @@
+import useGlobal from '../../hooks/useGlobal';
+
 function Loader() {
+  const { t } = useGlobal()!;
   return (
     <div className="flex items-center justify-center" role="status">
       <svg
@@ -17,7 +20,7 @@ function Loader() {
           fill="currentFill"
         />
       </svg>
-      <span className="sr-only">Loading...</span>
+      <span className="sr-only">{t('page.loading')}...</span>
     </div>
   );
 }

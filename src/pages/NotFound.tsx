@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
-import T from '../types/T';
+import useGlobal from '../hooks/useGlobal';
 
-function NotFound({ t }: T) {
+function NotFound() {
+  const { t } = useGlobal()!;
+
   return (
     <section className="h-screen w-full bg-lightGrayish dark:bg-dark">
       <div className="flex h-full items-center justify-center px-4 py-8 lg:px-6 lg:py-16">

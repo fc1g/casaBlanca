@@ -1,11 +1,13 @@
-import T from '../../types/T';
+import useGlobal from '../../hooks/useGlobal';
 
-interface TestimonialProps extends T {
+type TestimonialProps = {
   source: string;
   userName: string;
-}
+};
 
-function Testimonial({ t, source, userName }: TestimonialProps) {
+function Testimonial({ source, userName }: TestimonialProps) {
+  const { t } = useGlobal()!;
+
   return (
     <figure className="flex flex-col items-center justify-center border-b border-gray-200 bg-lightGrayish p-8 text-center md:p-12 lg:border-r dark:border-gray-600 dark:bg-dark dark:text-white">
       <blockquote className="mx-auto mb-8 max-w-2xl text-gray-600 dark:text-gray-300">

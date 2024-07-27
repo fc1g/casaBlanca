@@ -1,29 +1,19 @@
-export default interface VicinityPlace {
+export interface VicinityPlace {
   _id: string;
   info: {
-    briefInfo: {
-      eng: string;
-      pl: string;
-      sp: string;
-    };
-    title: {
-      eng: string;
-      pl: string;
-      sp: string;
-    };
-    text: {
-      eng: string;
-      pl: string;
-      sp: string;
-    };
-    imgAlt: {
-      eng: string;
-      pl: string;
-      sp: string;
-    };
+    briefInfo: Lang;
+    title: Lang;
+    text: Lang;
+    imgAlt: Lang;
   };
   imgSource: string;
   routeLink: string;
   distance: number;
   coords: [number, number];
+}
+
+export interface Lang {
+  en: string;
+  pl: string;
+  es: string;
 }

@@ -1,10 +1,10 @@
 import Children from '../../types/Children';
 
-interface LinkProps extends Children {
+type LinkProps = {
   href: string;
   className?: string;
   onClick?: () => void;
-}
+} & Children;
 
 function Link({
   href,
@@ -16,7 +16,7 @@ function Link({
     <div className="group inline-block border-inherit">
       <a
         onClick={onClick}
-        target="_blank"
+        target="blank"
         href={href}
         className={className}
         rel="noreferrer"

@@ -1,11 +1,11 @@
 import { ChevronDownIcon } from '@heroicons/react/16/solid';
 import Children from '../../types/Children';
 
-interface DropDownMenuProps extends Children {
+type DropDownMenuProps = {
   text: string;
   className: string;
   openMenu: string;
-}
+} & Children;
 
 function DropDownMenu({
   text,

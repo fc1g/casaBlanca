@@ -1,7 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import T from '../../types/T';
 
-function Nav({ t }: T) {
+import useGlobal from '../../hooks/useGlobal';
+
+function Nav() {
+  const { t } = useGlobal()!;
+
   return (
     <ul className="nav hidden items-center justify-center space-x-8 rounded-lg bg-lightGrayish px-5 py-2 text-dark md:flex dark:bg-dark dark:text-white">
       <li className="group">
