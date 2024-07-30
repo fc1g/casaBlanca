@@ -1,11 +1,12 @@
-import useGlobal from '../../hooks/useGlobal';
+import useGlobal from '../../hooks/globalStore';
 
 type ErrorMessageProps = {
   errorMessage: string;
 };
 
 function ErrorMessage({ errorMessage }: ErrorMessageProps) {
-  const { t } = useGlobal()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
 
   return (
     <section className="w-full bg-lightGrayish 2xl:container 2xl:mx-auto dark:bg-dark">

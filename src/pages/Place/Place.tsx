@@ -8,16 +8,20 @@ import Title from '../../components/Title/Title';
 import LeafMap from '../../components/layouts/LeafMap/LeafMap';
 import Link from '../../components/Link/Link';
 
-import useVicinity from '../../hooks/useVicinity';
-import useGlobal from '../../hooks/useGlobal';
+import useGlobal from '../../hooks/globalStore';
+import useVicinity from '../../hooks/vicinityStore';
 
-import { REDUCER_STATE_STATUS } from '../../types/reducer';
-import { Lang } from '../../types/VcinityPlace';
+import STORE_STATE_STATUS from '../../types/STORE_STATUS';
 
 function Place() {
-  const { t, i18next } = useGlobal()!;
-  const { getPlace, currPlace, status, errorMessage } = useVicinity()!;
-  const currLang = i18next.language as keyof Lang;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
+  const currLang = useGlobal(store => store.currLang);
+  const status = useVicinity(store => store.status);
+  const errorMessage = useVicinity(store => store.errorMessage);
+  const currPlace = useVicinity(store => store.currPlace);
+  const getPlace = useVicinity(store => store.getPlace);
+
   const { id } = useParams() as { id: string };
 
   useEffect(() => {
@@ -27,8 +31,8 @@ function Place() {
   return (
     <Page pageStyles="relative mb-12" logoStyles="dark:text-white text-dark">
       <>
-        {status === REDUCER_STATE_STATUS.LOADING && <Loader />}
-        {status === REDUCER_STATE_STATUS.ERROR && (
+        {status === STORE_STATE_STATUS.LOADING && <Loader />}
+        {status === STORE_STATE_STATUS.ERROR && (
           <ErrorMessage errorMessage={errorMessage} />
         )}
         {currPlace && currPlace.info && (

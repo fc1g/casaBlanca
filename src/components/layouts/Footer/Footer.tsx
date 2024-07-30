@@ -2,10 +2,11 @@ import SocialList from '../SocialList/SocialList';
 import Link from '../../Link/Link';
 
 import config from '../../../utils/config';
-import useGlobal from '../../../hooks/useGlobal';
+import useGlobal from '../../../hooks/globalStore';
 
 function Footer() {
-  const { t } = useGlobal()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
 
   return (
     <footer className="mb-2 mt-8 flex-col items-center justify-center py-4 text-xs text-gray-600 sm:px-0 sm:text-sm lg:text-base dark:bg-dark dark:text-white">

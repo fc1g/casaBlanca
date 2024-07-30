@@ -7,25 +7,26 @@ import Loader from '../../../../components/Loader/Loader';
 import ErrorMessage from '../../../../components/ErrorMessage/ErrorMessage';
 
 /* Hooks */
-import useCalendar from '../../../../hooks/useCalendar';
-import useGlobal from '../../../../hooks/useGlobal';
-import { REDUCER_STATE_STATUS } from '../../../../types/reducer';
+import useGlobal from '../../../../hooks/globalStore';
+import useCalendar from '../../../../hooks/calendarStore';
+
+import STORE_STATE_STATUS from '../../../../types/STORE_STATUS';
+import config from '../../../../utils/config';
 
 function Calendar() {
-  const { t } = useGlobal()!;
-  const {
-    getAllDates,
-    bookedDates,
-    status,
-    errorMessage,
-    month,
-    prevBtnHandler,
-    nextBtnHandler,
-    firstDayofMonth,
-    lastDateofLastMonth,
-    lastDateofMonth,
-    currYear,
-  } = useCalendar()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
+  const getAllDates = useCalendar(store => store.getAllDates);
+  const status = useCalendar(store => store.status);
+  const errorMessage = useCalendar(store => store.errorMessage);
+  const bookedDates = useCalendar(store => store.bookedDates);
+  const currYear = useCalendar(store => store.currYear);
+  const currMonth = useCalendar(store => store.currMonth);
+  const prevBtnHandler = useCalendar(store => store.prevBtnHandler);
+  const nextBtnHandler = useCalendar(store => store.nextBtnHandler);
+  const firstDayofMonth = useCalendar(store => store.firstDayofMonth);
+  const lastDateofLastMonth = useCalendar(store => store.lastDateofLastMonth);
+  const lastDateofMonth = useCalendar(store => store.lastDateofMonth);
 
   useEffect(() => {
     getAllDates();
@@ -33,16 +34,19 @@ function Calendar() {
 
   return (
     <>
-      {status === REDUCER_STATE_STATUS.LOADING && <Loader />}
-      {status === REDUCER_STATE_STATUS.ERROR && (
+      {status === STORE_STATE_STATUS.LOADING && <Loader />}
+      {status === STORE_STATE_STATUS.ERROR && (
         <ErrorMessage errorMessage={errorMessage} />
       )}
-      {bookedDates && (
+      {status === STORE_STATE_STATUS.READY && bookedDates && (
         <div className="flex items-center justify-center">
           <div className="flex w-full flex-col rounded-xl border border-gray-200">
             <div className="flex items-center justify-between px-6 pb-2 pt-6">
               <p className="text-2xl font-medium text-dark dark:text-white">
-                {t(`contacts.months.long.${month}`)} {currYear}
+                {t(
+                  `contacts.months.long.${config.MONTHS[currMonth].toLowerCase()}`
+                )}{' '}
+                {currYear}
               </p>
               <div className="flex items-center justify-center space-x-6">
                 <button

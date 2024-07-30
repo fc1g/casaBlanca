@@ -8,11 +8,11 @@ import Title from '../../components/Title/Title';
 import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
 import DropDownBtn from '../../components/DropDownBtn/DropDownBtn';
 import VicinityContent from './components/VicinityContent';
-
-import useGlobal from '../../hooks/useGlobal';
+import useGlobal from '../../hooks/globalStore';
 
 function Vicinity() {
-  const { t } = useGlobal()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
   const [openMenu, setOpenMenu] = useState<'sort' | 'limits' | ''>('');
   const [searchParams, setSearchParams] = useSearchParams();
   const queryStr: string = location.href.split('/vicinity')[1];

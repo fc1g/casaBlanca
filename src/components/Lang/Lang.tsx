@@ -1,4 +1,4 @@
-import useGlobal from '../../hooks/useGlobal';
+import useGlobal from '../../hooks/globalStore';
 
 type LangProps = {
   src: string;
@@ -7,7 +7,8 @@ type LangProps = {
 };
 
 function Lang({ src, translatePath, onClick }: LangProps) {
-  const { t } = useGlobal()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
 
   return (
     <li>

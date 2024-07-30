@@ -1,0 +1,8 @@
+enum STORE_STATE_STATUS {
+  START,
+  LOADING,
+  ERROR,
+  READY,
+}
+
+export default STORE_STATE_STATUS;

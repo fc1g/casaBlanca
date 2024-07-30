@@ -1,13 +1,14 @@
 import { NavLink } from 'react-router-dom';
 import SocialList from '../layouts/SocialList/SocialList';
-import useGlobal from '../../hooks/useGlobal';
+import useGlobal from '../../hooks/globalStore';
 
 type MobileNavProps = {
   isOpen: boolean;
 };
 
 function MobileNav({ isOpen }: MobileNavProps) {
-  const { t } = useGlobal()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
 
   return (
     <div

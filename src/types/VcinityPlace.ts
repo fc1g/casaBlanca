@@ -12,7 +12,7 @@ export interface VicinityPlace {
   coords: [number, number];
 }
 
-export interface Lang {
+interface Lang {
   en: string;
   pl: string;
   es: string;

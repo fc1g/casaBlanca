@@ -1,4 +1,4 @@
-import useGlobal from '../../hooks/useGlobal';
+import useGlobal from '../../hooks/globalStore';
 
 type TestimonialProps = {
   source: string;
@@ -6,7 +6,8 @@ type TestimonialProps = {
 };
 
 function Testimonial({ source, userName }: TestimonialProps) {
-  const { t } = useGlobal()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
 
   return (
     <figure className="flex flex-col items-center justify-center border-b border-gray-200 bg-lightGrayish p-8 text-center md:p-12 lg:border-r dark:border-gray-600 dark:bg-dark dark:text-white">

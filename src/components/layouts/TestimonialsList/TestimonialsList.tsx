@@ -2,15 +2,15 @@ import Testimonial from '../../Testimonial/Testimonial';
 import Link from '../../Link/Link';
 import Title from '../../Title/Title';
 
-import useGlobal from '../../../hooks/useGlobal';
-
 import kubaUserImg from '/users/kuba.webp';
 import monikaUserImg from '/users/monika.webp';
 import nikUserImg from '/users/nik.webp';
 import adamUserImg from '/users/adam.webp';
+import useGlobal from '../../../hooks/globalStore';
 
 function TestimonialsList() {
-  const { t } = useGlobal()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
 
   return (
     <section className="bg-white dark:bg-lightDark">

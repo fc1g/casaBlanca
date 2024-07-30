@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
-import useGlobal from '../hooks/useGlobal';
+import useGlobal from '../hooks/globalStore';
 
 function NotFound() {
-  const { t } = useGlobal()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
 
   return (
     <section className="h-screen w-full bg-lightGrayish dark:bg-dark">

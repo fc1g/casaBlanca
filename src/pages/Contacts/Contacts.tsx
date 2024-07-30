@@ -6,10 +6,11 @@ import TextCard from '../../components/TextCard/TextCard';
 import Link from '../../components/Link/Link';
 import Accordion from '../../components/layouts/Accordion/Accordion';
 
-import useGlobal from '../../hooks/useGlobal';
+import useGlobal from '../../hooks/globalStore';
 
 function Contacts() {
-  const { t } = useGlobal()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
 
   return (
     <Page pageStyles="relative" logoStyles="dark:text-white text-dark">

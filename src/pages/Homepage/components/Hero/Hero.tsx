@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 import Btn from '../../../../components/Btn/Btn';
 
-import useGlobal from '../../../../hooks/useGlobal';
-
 import bgDesc from '../../../../assets/images/desktop/terasaEnter.webp';
 import bgMob from '../../../../assets/images/mobile/terasaEnter.webp';
+import useGlobal from '../../../../hooks/globalStore';
 
 function Hero() {
-  const { t } = useGlobal()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
 
   return (
     <div className="relative mx-auto mb-8 flex h-[91vh] w-full text-white 2xl:container before:absolute before:inset-0 before:z-10 before:block before:bg-gradient-to-r before:from-[#00000080] before:to-[#00000080] before:opacity-75 before:content-[''] md:mb-16">

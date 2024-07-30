@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import Btn from '../Btn/Btn';
-import { Lang, VicinityPlace } from '../../types/VcinityPlace';
-import useGlobal from '../../hooks/useGlobal';
+import { VicinityPlace } from '../../types/VcinityPlace';
+import useGlobal from '../../hooks/globalStore';
 
 type CardProps = {
   data: VicinityPlace;
 };
 
 function Card({ data }: CardProps) {
-  const { t, i18next } = useGlobal()!;
-
-  const currLang = i18next.language as keyof Lang;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
+  const currLang = useGlobal(store => store.currLang);
 
   return (
     <div className="w-full rounded-lg border border-gray-200 bg-lightGrayish shadow dark:border-lightDark dark:bg-dark">

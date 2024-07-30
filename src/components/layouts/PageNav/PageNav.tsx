@@ -5,12 +5,12 @@ import MobileNav from '../../MobileNav/MobileNav';
 import Logo from '../../Logo/Logo';
 import Hamburger from '../../Hamburger/Hamburger';
 
-import useGlobal from '../../../hooks/useGlobal';
-
 import engFlag from '/flags/united-kingdom.webp';
 import plFlag from '/flags/poland.webp';
 import spFlag from '/flags/spain.webp';
 import LangMenu from '../LangMenu/LangMenu';
+import useGlobal from '../../../hooks/globalStore';
+import { Langs } from '../../../types/Langs';
 
 type PageNavProps = {
   pageStyles?: string;
@@ -18,7 +18,7 @@ type PageNavProps = {
 };
 
 function PageNav({ pageStyles = '', logoStyles = '' }: PageNavProps) {
-  const { setCurrLang } = useGlobal()!;
+  const setCurrLang = useGlobal(store => store.setCurrLang);
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
 
   const flags: {
@@ -32,7 +32,7 @@ function PageNav({ pageStyles = '', logoStyles = '' }: PageNavProps) {
   };
 
   useEffect(() => {
-    const data = localStorage.getItem('i18nextLng');
+    const data = localStorage.getItem('i18nextLng') as Langs;
     if (!data) return;
 
     setCurrLang(data);

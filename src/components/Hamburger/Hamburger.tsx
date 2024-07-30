@@ -1,6 +1,6 @@
 import { Dispatch } from 'react';
 import './Hamburger.css';
-import useGlobal from '../../hooks/useGlobal';
+import useGlobal from '../../hooks/globalStore';
 
 type HamburgerProps = {
   isOpen: boolean;
@@ -8,7 +8,8 @@ type HamburgerProps = {
 };
 
 function Hamburger({ isOpen, setIsOpen }: HamburgerProps) {
-  const { t } = useGlobal()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
   return (
     <button
       type="button"

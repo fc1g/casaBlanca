@@ -2,21 +2,21 @@ import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { Icon } from 'leaflet';
 import './LeafMap.css';
 
-import useGlobal from '../../../hooks/useGlobal';
-
 import homeMarker from '../../../assets/images/home.webp';
 import marker from '../../../assets/images/pin.webp';
 
 import config from '../../../utils/config';
-import { Lang, VicinityPlace } from '../../../types/VcinityPlace';
+import { VicinityPlace } from '../../../types/VcinityPlace';
+import useGlobal from '../../../hooks/globalStore';
 
 type LeafMapProps = {
   data: Partial<VicinityPlace>;
 };
 
 function LeafMap({ data }: LeafMapProps) {
-  const { t, i18next } = useGlobal()!;
-  const currLang = i18next.language as keyof Lang;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
+  const currLang = useGlobal(store => store.currLang);
 
   return (
     <div className="dark:brightness-75">

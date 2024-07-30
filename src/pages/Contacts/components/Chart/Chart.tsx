@@ -1,7 +1,8 @@
-import useGlobal from '../../../../hooks/useGlobal';
+import useGlobal from '../../../../hooks/globalStore';
 
 function Chart() {
-  const { t } = useGlobal()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
   return (
     <div className="px-1 md:mb-0">
       <div

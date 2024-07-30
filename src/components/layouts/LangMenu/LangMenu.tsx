@@ -1,7 +1,10 @@
 import { useState } from 'react';
-import useGlobal from '../../../hooks/useGlobal';
+
 import Lang from '../../Lang/Lang';
 import LangList from '../LangList/LangList';
+import useGlobal from '../../../hooks/globalStore';
+
+import { Langs } from '../../../types/Langs';
 
 type LangMenuProps = {
   flags: {
@@ -13,10 +16,16 @@ type LangMenuProps = {
 
 function LangMenu({ flags }: LangMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const { LOCALS, currLang, t, changeLangHandler } = useGlobal()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
+  const LOCALS = useGlobal(store => store.LOCALS);
+  const currLang = useGlobal(store => store.currLang);
+  const i18next = useGlobal(store => store.i18next);
+  const setCurrLang = useGlobal(store => store.setCurrLang);
 
-  function onLangBtnClick(lang: string) {
-    changeLangHandler(lang);
+  function onLangBtnClick(lang: Langs) {
+    i18next.changeLanguage(lang);
+    setCurrLang(lang);
     setIsOpen(false);
   }
 

@@ -7,7 +7,7 @@ import {
 } from '@heroicons/react/24/solid';
 import { Dispatch } from 'react';
 import Link from '../Link/Link';
-import useGlobal from '../../hooks/useGlobal';
+import useGlobal from '../../hooks/globalStore';
 
 type AccordionItemProps = {
   content: string;
@@ -17,7 +17,9 @@ type AccordionItemProps = {
 };
 
 function AccordionItem({ content, active, onClick, data }: AccordionItemProps) {
-  const { t } = useGlobal()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
+
   return (
     <>
       <h3>

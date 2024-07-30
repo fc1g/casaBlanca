@@ -1,4 +1,8 @@
-const LOCALS = {
+const LOCALS: {
+  EN: 'en';
+  PL: 'pl';
+  SP: 'es';
+} = {
   EN: 'en',
   PL: 'pl',
   SP: 'es',

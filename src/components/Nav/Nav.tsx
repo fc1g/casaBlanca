@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom';
-
-import useGlobal from '../../hooks/useGlobal';
+import useGlobal from '../../hooks/globalStore';
 
 function Nav() {
-  const { t } = useGlobal()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
 
   return (
     <ul className="nav hidden items-center justify-center space-x-8 rounded-lg bg-lightGrayish px-5 py-2 text-dark md:flex dark:bg-dark dark:text-white">

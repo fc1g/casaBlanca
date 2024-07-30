@@ -1,3 +1,4 @@
+import useGlobal from '../../../../hooks/globalStore';
 import { Source } from '../../../../types/Images';
 
 type SlideProps = {
@@ -6,6 +7,8 @@ type SlideProps = {
 } & Source;
 
 function Slide({ source, alt, percentage }: SlideProps) {
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
   return (
     <li
       className="transtion absolute top-0 grid h-screen w-full items-center justify-center duration-1000"
@@ -18,7 +21,7 @@ function Slide({ source, alt, percentage }: SlideProps) {
         <img
           className="h-full w-full object-cover object-center dark:brightness-75"
           src={source.desktop}
-          alt={alt}
+          alt={t(`${alt}`)}
         />
       </picture>
     </li>

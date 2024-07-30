@@ -7,7 +7,6 @@ import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import { Suspense } from 'react';
 import { App } from './App';
 
-import GlobalProvider from './context/GlobalContext';
 import Loader from './components/Loader/Loader';
 
 describe('App', () => {
@@ -18,17 +17,15 @@ describe('App', () => {
     /* Act */
     render(
       <MemoryRouter initialEntries={[badRoute]}>
-        <GlobalProvider>
-          <Suspense
-            fallback={
-              <div className="flex h-screen w-full items-center justify-center">
-                <Loader />
-              </div>
-            }
-          >
-            <App />
-          </Suspense>
-        </GlobalProvider>
+        <Suspense
+          fallback={
+            <div className="flex h-screen w-full items-center justify-center">
+              <Loader />
+            </div>
+          }
+        >
+          <App />
+        </Suspense>
       </MemoryRouter>
     );
 
@@ -48,17 +45,15 @@ describe('App', () => {
     /* Act */
     render(
       <BrowserRouter>
-        <GlobalProvider>
-          <Suspense
-            fallback={
-              <div className="flex h-screen w-full items-center justify-center">
-                <Loader />
-              </div>
-            }
-          >
-            <App />
-          </Suspense>
-        </GlobalProvider>
+        <Suspense
+          fallback={
+            <div className="flex h-screen w-full items-center justify-center">
+              <Loader />
+            </div>
+          }
+        >
+          <App />
+        </Suspense>
       </BrowserRouter>
     );
 

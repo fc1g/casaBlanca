@@ -1,12 +1,15 @@
 /* eslint-disable no-nested-ternary */
 import { useEffect } from 'react';
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/16/solid';
-import useVicinity from '../../../hooks/useVicinity';
+
 import Loader from '../../../components/Loader/Loader';
-import { REDUCER_STATE_STATUS } from '../../../types/reducer';
 import Card from '../../../components/Card/Card';
 import ErrorMessage from '../../../components/ErrorMessage/ErrorMessage';
-import useGlobal from '../../../hooks/useGlobal';
+
+import useGlobal from '../../../hooks/globalStore';
+import useVicinity from '../../../hooks/vicinityStore';
+
+import STORE_STATE_STATUS from '../../../types/STORE_STATUS';
 
 type VicinityContentProps = {
   searchParams: URLSearchParams;
@@ -14,24 +17,28 @@ type VicinityContentProps = {
 };
 
 function VicinityContent({ searchParams, navHandler }: VicinityContentProps) {
-  const { t } = useGlobal()!;
-  const { getAllPlaces, status, errorMessage, vicinityPlaces } = useVicinity()!;
+  const useTranslation = useGlobal(store => store.useTranslation);
+  const { t } = useTranslation();
+  const status = useVicinity(store => store.status);
+  const errorMessage = useVicinity(store => store.errorMessage);
+  const vicinityPlaces = useVicinity(store => store.vicinityPlaces);
+  const getAllPlaces = useVicinity(store => store.getAllPlaces);
 
   const queryStr: string = location.href.split('/vicinity')[1];
   const currPage = +searchParams.get('page')!;
 
   if (location.href.includes('vicinity'))
     document.body.style.paddingRight =
-      status === REDUCER_STATE_STATUS.READY ? '0px' : '15px';
+      status === STORE_STATE_STATUS.READY ? '0px' : '15px';
 
   useEffect(() => {
     getAllPlaces(queryStr);
   }, [queryStr, getAllPlaces]);
   return (
     <div>
-      {status === REDUCER_STATE_STATUS.LOADING ? (
+      {status === STORE_STATE_STATUS.LOADING ? (
         <Loader />
-      ) : status === REDUCER_STATE_STATUS.ERROR ? (
+      ) : status === STORE_STATE_STATUS.ERROR ? (
         <ErrorMessage errorMessage={errorMessage} />
       ) : (
         <main>
