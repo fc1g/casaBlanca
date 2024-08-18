@@ -23,7 +23,7 @@ const queryClient = new QueryClient({
   },
 });
 
-function App() {
+export default function App() {
   return (
     <Routes>
       <Route index element={<Homepage />} />
@@ -35,8 +35,6 @@ function App() {
     </Routes>
   );
 }
-
-export default App;
 
 export function WrappedApp() {
   return (
