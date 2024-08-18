@@ -39,5 +39,6 @@ module.exports = {
     'no-underscore-dangle': 0,
     'no-restricted-globals': 0,
     'react/jsx-no-constructed-context-values': 0,
+    'no-plusplus': 0,
   },
 };

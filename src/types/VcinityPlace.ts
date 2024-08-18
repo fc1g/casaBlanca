@@ -1,4 +1,4 @@
-export interface VicinityPlace {
+export type Place = {
   _id: string;
   info: {
     briefInfo: Lang;
@@ -6,11 +6,21 @@ export interface VicinityPlace {
     text: Lang;
     imgAlt: Lang;
   };
-  imgSource: string;
+  img: string;
   routeLink: string;
   distance: number;
   coords: [number, number];
-}
+};
+
+export type VicinityPlace = {
+  _id: string;
+  img: string;
+  info: {
+    briefInfo: Lang;
+    title: Lang;
+    imgAlt: Lang;
+  };
+};
 
 interface Lang {
   en: string;

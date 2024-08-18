@@ -5,6 +5,6 @@ export interface Source {
   };
 }
 
-export interface Images extends Source {
+export interface Image extends Source {
   imgAltText: string;
 }

@@ -40,9 +40,6 @@ export default {
         lightDark: '#23272f',
         lightGrayish: '#f0f0f0',
       },
-      fontFamily: {
-        serif: ['Aleo', 'serif'],
-      },
     },
   },
   plugins: [],

@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 
 type LogoProps = {
-  className: string;
+  logoStyles: string;
 };
 
-function Logo({ className }: LogoProps) {
+function Logo({ logoStyles }: LogoProps) {
   return (
-    <Link to="/">
-      <span className={`text-xl xs:text-3xl md:text-4xl ${className}`}>
+    <Link className={logoStyles} to="/">
+      <span className="text-xl focus:outline-none focus:ring-4 focus:ring-blue-300 xs:text-3xl md:text-4xl focus:dark:ring-blue-800">
         casaBlanca
       </span>
     </Link>

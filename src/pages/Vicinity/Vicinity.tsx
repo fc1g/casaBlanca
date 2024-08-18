@@ -1,32 +1,37 @@
-/* eslint-disable no-nested-ternary */
 /* eslint-disable react/jsx-no-bind */
+/* eslint-disable no-nested-ternary */
 import { useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-
-import Page from '../../components/layouts/Page/Page';
-import Title from '../../components/Title/Title';
-import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
 import DropDownBtn from '../../components/DropDownBtn/DropDownBtn';
-import VicinityContent from './components/VicinityContent';
-import useGlobal from '../../hooks/globalStore';
+import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
+import useGlobal from '../../hooks/useGlobal';
+import Page from '../../ui/Page/Page';
+import Title from '../../ui/Title/Title';
+import VicinityContent from '../../ui/VicinityContent/VicinityContent';
 
 function Vicinity() {
-  const useTranslation = useGlobal(store => store.useTranslation);
-  const { t } = useTranslation();
+  const { t } = useGlobal()!;
+  const navigate = useNavigate();
   const [openMenu, setOpenMenu] = useState<'sort' | 'limits' | ''>('');
   const [searchParams, setSearchParams] = useSearchParams();
   const queryStr: string = location.href.split('/vicinity')[1];
-  const navigate = useNavigate();
+  const currPage = +searchParams.get('page')!;
+  const limit = +searchParams.get('limit')! || null;
 
   function navHandler(searchString: string, type: 'sort' | 'limit' | 'page') {
     if (queryStr.includes(`${type}=${searchString}`)) return;
 
-    const navStr = queryStr.includes(type)
+    let navStr = queryStr.includes(type)
       ? queryStr.replace(
           `${type}=${searchParams.get(type)}`,
           `${type}=${searchString}`
         )
-      : `${queryStr}&${type}=${encodeURIComponent(searchString)}`;
+      : `${queryStr}&${type}=${searchString}`;
+
+    if ((type === 'sort' || type === 'limit') && currPage > 1) {
+      navStr = navStr.replace(`page=${currPage}`, 'page=1');
+      setSearchParams({ page: '1' });
+    }
 
     setSearchParams(
       type === 'sort'
@@ -35,6 +40,7 @@ function Vicinity() {
           ? { limit: searchString }
           : { page: searchString }
     );
+
     navigate(
       navStr ? `${navStr}` : `&${type}=${encodeURIComponent(searchString)}`
     );
@@ -51,34 +57,24 @@ function Vicinity() {
   });
 
   return (
-    <Page pageStyles="relative mb-12" logoStyles="text-dark dark:text-white">
-      <div className="w-full">
-        <div className="mx-auto max-w-screen-xl px-4 text-center lg:px-6">
+    <Page logoStyles="dark:text-white text-dark" navStyles="relative mb-6">
+      <div className="mx-auto max-w-screen-xl py-8 text-center lg:py-16">
+        <div className="mx-auto max-w-screen-xl px-4 text-center">
           <Title
-            title={t('vicinity.title')}
-            subtitle={t('vicinity.subtitle')}
+            title={`${t('vicinity.title')}`}
+            subtitle={`${t('vicinity.subtitle')}`}
           />
         </div>
+
         <div className="mb-12 flex flex-col">
-          <div className="flex items-center justify-end p-6 [&>div:nth-child(odd)]:border-r [&>div:nth-child(odd)]:border-gray-300 [&>div:nth-child(odd)]:dark:border-gray-600">
+          <div className="flex items-center justify-end p-6 text-white [&>div:nth-child(odd)]:border-r [&>div:nth-child(odd)]:border-gray-300 [&>div:nth-child(odd)]:dark:border-gray-600">
             <div className="px-4">
               <DropDownMenu text="Sort" openMenu={openMenu} className="left-0">
                 <>
-                  <DropDownBtn
-                    onClick={() => {
-                      navHandler('distance', 'sort');
-                      navHandler('1', 'page');
-                    }}
-                  >
+                  <DropDownBtn onClick={() => navHandler('distance', 'sort')}>
                     {t('vicinity.sort.low')}
                   </DropDownBtn>
-
-                  <DropDownBtn
-                    onClick={() => {
-                      navHandler('-distance', 'sort');
-                      navHandler('1', 'page');
-                    }}
-                  >
+                  <DropDownBtn onClick={() => navHandler('-distance', 'sort')}>
                     {t('vicinity.sort.high')}
                   </DropDownBtn>
                 </>
@@ -92,40 +88,28 @@ function Vicinity() {
                 className="right-0"
               >
                 <>
-                  <DropDownBtn
-                    onClick={() => {
-                      navHandler('3', 'limit');
-                      navHandler('1', 'page');
-                    }}
-                  >
+                  <DropDownBtn onClick={() => navHandler('3', 'limit')}>
                     {t('vicinity.limit.first')}
                   </DropDownBtn>
-
-                  <DropDownBtn
-                    onClick={() => {
-                      navHandler('6', 'limit');
-                      navHandler('1', 'page');
-                    }}
-                  >
+                  <DropDownBtn onClick={() => navHandler('6', 'limit')}>
                     {t('vicinity.limit.second')}
                   </DropDownBtn>
-
-                  <DropDownBtn
-                    onClick={() => {
-                      navHandler('9', 'limit');
-                      navHandler('1', 'page');
-                    }}
-                  >
+                  <DropDownBtn onClick={() => navHandler('9', 'limit')}>
                     {t('vicinity.limit.third')}
                   </DropDownBtn>
                 </>
               </DropDownMenu>
             </div>
           </div>
-
           <hr className="border-gray-200 dark:border-gray-600" />
         </div>
-        <VicinityContent searchParams={searchParams} navHandler={navHandler} />
+
+        <VicinityContent
+          currPage={currPage}
+          queryStr={queryStr}
+          navHandler={navHandler}
+          limit={limit}
+        />
       </div>
     </Page>
   );

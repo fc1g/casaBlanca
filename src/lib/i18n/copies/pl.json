@@ -198,18 +198,18 @@
         "december": "December"
       },
       "abbr": {
-        "january": "Jan",
-        "february": "Feb",
+        "january": "Sty",
+        "february": "Lut",
         "march": "Mar",
-        "april": "Apr",
-        "may": "May",
-        "june": "Jun",
-        "july": "Jul",
-        "august": "Aug",
-        "september": "Sep",
-        "october": "Oct",
-        "november": "Nov",
-        "december": "Dec"
+        "april": "Kwi",
+        "may": "Maj",
+        "june": "Cze",
+        "july": "Lip",
+        "august": "Sie",
+        "september": "Wrz",
+        "october": "Paz",
+        "november": "Lis",
+        "december": "Gru"
       }
     }
   },

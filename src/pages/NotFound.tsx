@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom';
-import useGlobal from '../hooks/globalStore';
+import useGlobal from '../hooks/useGlobal';
 
 function NotFound() {
-  const useTranslation = useGlobal(store => store.useTranslation);
-  const { t } = useTranslation();
+  const { t } = useGlobal()!;
 
   return (
     <section className="h-screen w-full bg-lightGrayish dark:bg-dark">
-      <div className="flex h-full items-center justify-center px-4 py-8 lg:px-6 lg:py-16">
+      <div className="flex h-full items-center justify-center px-4 py-8 lg:py-16">
         <div className="text-center">
           <h1 className="mb-4 text-7xl font-extrabold tracking-tight text-primary-600 lg:text-9xl dark:text-primary-500">
             404

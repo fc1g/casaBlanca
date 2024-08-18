@@ -1,10 +1,10 @@
-import Hero from './components/Hero/Hero';
-import Page from '../../components/layouts/Page/Page';
-import TestimonialsList from '../../components/layouts/TestimonialsList/TestimonialsList';
+import Hero from '../../ui/Hero/Hero';
+import Page from '../../ui/Page/Page';
+import TestimonialsList from '../../ui/TestimonialsList/TestimonialsList';
 
 function Homepage() {
   return (
-    <Page logoStyles="text-white">
+    <Page logoStyles="text-white dark:text-white" navStyles="">
       <>
         <Hero />
 

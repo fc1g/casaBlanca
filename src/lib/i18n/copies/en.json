@@ -45,19 +45,19 @@
       "btn": "Show more...",
       "kuba": {
         "title": "House very well maintained",
-        "text": "Highly recommend, great place, includes all the necessary things to stay with a child! Very nice and quick contact with the owners, who will suggest and help solve any possible problem.\"",
+        "text": "Highly recommend, includes all the necessary things to stay with a child! Very nice and quick contact with the owners, who will help solve any possible problem.\"",
         "userName": "Kuba",
         "imgAltText": ""
       },
       "monika": {
-        "title": "New, luxuriously furnished house",
+        "title": "Luxuriously furnished house",
         "text": "I highly recommend a vacation in this beautiful house. Charming town, beach, and plenty of water activities. Perfect place to relax and get away from everyday life.\"",
         "userName": "Monika",
         "imgAltText": ""
       },
       "nik": {
         "title": "Literally everything you need",
-        "text": "The neighborhood is quiet. Lots of restaurants. Very helpful staff. The owner to get along in every subject. Ms. Anita very helpful on site you can always ask for help.\"",
+        "text": "The neighborhood is quiet. Lots of restaurants. Very helpful staff. The owner to get along in every subject. Ms. Anita very helpful you can always ask for help.\"",
         "userName": "Nik",
         "imgAltText": ""
       },
@@ -83,12 +83,12 @@
         "secondPart": "The house has all the necessary equipment. If you have a small child, there are toys, strollers, a high chair, and a bottle warmer for them. Unfortunately, we do not allow pets."
       },
       "vicinity": {
-        "firstPart": "Our beautiful house is in the well-developed town of San Pedro del Pinatar. It offers everything for an unforgettable vacation, with shopping centers, cafes, restaurants, parks, and the beach all within walking distance. Information about nearby attractions is available below.",
-        "secondPart": "There are many parking spaces near the house. The nearest airports are Alicante (1 hour away) and Murcia (36 minutes away). If you need a car, you can arrange a transfer with the Calma company."
+        "firstPart": "Our beautiful house is in the well-developed town of San Pedro del Pinatar. It offers everything for an unforgettable vacation, with shopping centers, restaurants, parks, and the beach all within walking distance. Information about nearby attractions is available below.",
+        "secondPart": "There are many parking spaces near the house. The nearest airports are Alicante and Murcia. If you need a car, you can arrange a transfer with the Calma company."
       },
       "rentInfo": {
-        "firstPart": "It's worth mentioning that we are on both Booking.com and Airbnb. If you don't feel confident, you can book the property through these two popular services. However, to save money, feel free to book directly with us by sending a message or giving us a call to arrange the dates.",
-        "secondPart": "Once you are ready to make a reservation, please contact Mrs. Anita Violleta Kołodziejczyk. She is responsible for your booking and will be on-site to assist you with your reservation."
+        "firstPart": "It's worth mentioning that we are on both Booking and Airbnb. If you don't feel confident, you can book the property through these two services. However, to save money, feel free to book directly with us by sending a message or giving us a call to arrange the dates.",
+        "secondPart": "Once you are ready to make a reservation, contact Mrs. Anita Kołodziejczyk. She is responsible for your booking and will be on-site to assist you with your reservation."
       }
     },
     "slider": {

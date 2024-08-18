@@ -1,12 +1,25 @@
-import AboutTabs from './components/AboutTabs/AboutTabs';
-import Page from '../../components/layouts/Page/Page';
-import Slider from './components/Slider/Slider';
+import AboutTabs from '../../ui/AboutTabs/AboutTabs';
+import Page from '../../ui/Page/Page';
+import Slider from '../../ui/Slider/Slider';
 
 function About() {
   return (
-    <Page logoStyles="text-transparent">
+    <Page
+      logoStyles="cursor-default select-none pointer-events-none text-transparent"
+      navStyles=""
+    >
       <>
-        <Slider />
+        <Slider>
+          <>
+            <Slider.Slides />
+
+            <Slider.AbsBtn position="left">Prev</Slider.AbsBtn>
+
+            <Slider.AbsBtn position="right">Next</Slider.AbsBtn>
+
+            <Slider.Dots />
+          </>
+        </Slider>
 
         <AboutTabs />
       </>

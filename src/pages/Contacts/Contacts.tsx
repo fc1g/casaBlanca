@@ -1,20 +1,19 @@
-import Page from '../../components/layouts/Page/Page';
-import Chart from './components/Chart/Chart';
-import Calendar from './components/Calendar/Calendar';
-import Title from '../../components/Title/Title';
+import Chart from '../../ui/Chart/Chart';
+import Title from '../../ui/Title/Title';
 import TextCard from '../../components/TextCard/TextCard';
 import Link from '../../components/Link/Link';
-import Accordion from '../../components/layouts/Accordion/Accordion';
+import Accordion from '../../ui/Accordion/Accordion';
 
-import useGlobal from '../../hooks/globalStore';
+import useGlobal from '../../hooks/useGlobal';
+import Calendar from '../../ui/Calendar/Calendar';
+import Page from '../../ui/Page/Page';
 
 function Contacts() {
-  const useTranslation = useGlobal(store => store.useTranslation);
-  const { t } = useTranslation();
+  const { t } = useGlobal()!;
 
   return (
-    <Page pageStyles="relative" logoStyles="dark:text-white text-dark">
-      <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-6 lg:py-16">
+    <Page logoStyles="dark:text-white text-dark" navStyles="relative mb-6">
+      <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:py-16">
         <Title title={t('contacts.title')} subtitle={t('contacts.subtitle')} />
 
         <div className="my-24 grid grid-cols-1 gap-16 md:grid-cols-2">

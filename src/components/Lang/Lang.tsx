@@ -1,4 +1,4 @@
-import useGlobal from '../../hooks/globalStore';
+import useGlobal from '../../hooks/useGlobal';
 
 type LangProps = {
   src: string;
@@ -7,8 +7,7 @@ type LangProps = {
 };
 
 function Lang({ src, translatePath, onClick }: LangProps) {
-  const useTranslation = useGlobal(store => store.useTranslation);
-  const { t } = useTranslation();
+  const { t } = useGlobal()!;
 
   return (
     <li>
@@ -23,7 +22,7 @@ function Lang({ src, translatePath, onClick }: LangProps) {
             alt={t(`${translatePath}.imgAltText`)}
             className="h-4 w-4"
           />
-          <span className="group-hover:text-primary-300">
+          <span className="group-hover:text-primary-800 dark:group-hover:text-primary-300">
             {t(`${translatePath}.text`)}
           </span>
         </div>

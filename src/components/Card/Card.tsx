@@ -2,36 +2,35 @@ import { Link } from 'react-router-dom';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import Btn from '../Btn/Btn';
 import { VicinityPlace } from '../../types/VcinityPlace';
-import useGlobal from '../../hooks/globalStore';
+import useGlobal from '../../hooks/useGlobal';
+import Api from '../../services/Api';
 
 type CardProps = {
-  data: VicinityPlace;
+  place: VicinityPlace;
 };
 
-function Card({ data }: CardProps) {
-  const useTranslation = useGlobal(store => store.useTranslation);
-  const { t } = useTranslation();
-  const currLang = useGlobal(store => store.currLang);
+function Card({ place }: CardProps) {
+  const { t, currLang } = useGlobal()!;
 
   return (
     <div className="w-full rounded-lg border border-gray-200 bg-lightGrayish shadow dark:border-lightDark dark:bg-dark">
       <div>
         <img
-          className="h-80 w-full rounded-t-lg object-cover object-center"
-          src={data.imgSource}
-          alt={data.info.imgAlt[currLang]}
+          className="h-72 w-full rounded-t-lg object-cover object-center"
+          src={`${Api.UPLOAD_URL}${place.img}`}
+          alt={place.info.imgAlt[currLang]}
         />
       </div>
       <div className="p-5">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-dark dark:text-white">
-          {data.info.title[currLang]}
+          {place.info.title[currLang]}
         </h5>
 
         <p className="mb-3 font-normal text-gray-600 dark:text-gray-300">
-          {data.info.briefInfo[currLang]}
+          {place.info.briefInfo[currLang]}
         </p>
 
-        <Link to={`/place/${data._id}`}>
+        <Link to={`/place/${place._id}`}>
           <Btn
             size="default"
             variant="default"

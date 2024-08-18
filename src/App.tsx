@@ -1,7 +1,12 @@
-import { lazy, Suspense } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-import Loader from './components/Loader/Loader';
+import { lazy, Suspense } from 'react';
+
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import Loader from './ui/Loader/Loader';
+
+import GlobalProvider from './context/globalContext';
 
 const Homepage = lazy(() => import('./pages/Homepage/Homepage'));
 const About = lazy(() => import('./pages/About/About'));
@@ -10,39 +15,46 @@ const Place = lazy(() => import('./pages/Place/Place'));
 const Contacts = lazy(() => import('./pages/Contacts/Contacts'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
-export function App() {
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 60 * 1000,
+    },
+  },
+});
+
+function App() {
   return (
     <Routes>
       <Route index element={<Homepage />} />
-
-      <Route path="about" element={<About />} />
-
-      <Route path="vicinity" element={<Vicinity />}>
-        <Route index element={<Navigate replace to="?page=1" />} />
-        <Route path="?page=1" />
-      </Route>
-
-      <Route path="place/:id" element={<Place />} />
-
-      <Route path="cta" element={<Contacts />} />
-
+      <Route path="/about" element={<About />} />
+      <Route path="/contacts" element={<Contacts />} />
+      <Route path="/vicinity" element={<Vicinity />} />
+      <Route path="/place/:placeId" element={<Place />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
 
+export default App;
+
 export function WrappedApp() {
   return (
-    <BrowserRouter>
-      <Suspense
-        fallback={
-          <div className="flex h-screen w-full items-center justify-center">
-            <Loader />
-          </div>
-        }
-      >
-        <App />
-      </Suspense>
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools initialIsOpen={false} />
+      <GlobalProvider>
+        <Suspense
+          fallback={
+            <div className="flex min-h-screen w-full items-center justify-center">
+              <Loader />
+            </div>
+          }
+        >
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </Suspense>
+      </GlobalProvider>
+    </QueryClientProvider>
   );
 }
