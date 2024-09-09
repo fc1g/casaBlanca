@@ -2,7 +2,7 @@
   "routes": [
     { "src": "/about", "dest": "/" },
     { "src": "/vicinity", "dest": "/" },
-    { "src": "/place/:placeId", "dest": "/" },
+    { "src": "/vicinity/:vicinityId", "dest": "/" },
     { "src": "/contacts", "dest": "/" },
     { "src": "/", "dest": "/" }
   ]

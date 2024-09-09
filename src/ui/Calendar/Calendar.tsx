@@ -14,6 +14,7 @@ import {
   add,
   startOfWeek,
   addDays,
+  isWithinInterval,
 } from 'date-fns';
 import { pl, es, enGB } from 'date-fns/locale';
 import { useState } from 'react';
@@ -23,6 +24,7 @@ import getAllBookedDates from '../../services/apiCalendar';
 import Loader from '../Loader/Loader';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import LOCALS from '../../lib/i18n/constants';
+import BookedDate from '../../types/BookedDate';
 
 const colStartClasses = [
   '',
@@ -62,6 +64,15 @@ function Calendar() {
   function nextMonth() {
     const firstDayNextMonth = add(firstDayCurrentMonth, { months: 1 });
     setCurrMonth(format(firstDayNextMonth, 'MMM-yyyy'));
+  }
+
+  function isDateBooked(date: Date, bookedRanges: BookedDate[]) {
+    return bookedRanges.some(range =>
+      isWithinInterval(date, {
+        start: range.initialDate,
+        end: range.deadlineDate,
+      })
+    );
   }
 
   return (
@@ -114,7 +125,7 @@ function Calendar() {
                   <li
                     className={`${i === 0 && colStartClasses[getDay(day)]} ${
                       isSameMonth(day, firstDayCurrentMonth)
-                        ? 'valid relative z-20 cursor-pointer text-dark transition duration-300 dark:text-white'
+                        ? `date relative z-20 cursor-pointer text-dark transition duration-300 dark:text-white ${isDateBooked(day, bookedDates) ? 'booked' : 'valid'}`
                         : 'cursor-not-allowed text-gray-400'
                     }`}
                     key={day.toString()}

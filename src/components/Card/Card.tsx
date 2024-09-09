@@ -13,7 +13,7 @@ function Card({ place }: CardProps) {
   const { t, currLang } = useGlobal()!;
 
   return (
-    <div className="w-full rounded-lg border border-gray-200 bg-lightGrayish shadow dark:border-lightDark dark:bg-dark">
+    <li className="w-full rounded-lg border border-gray-200 bg-lightGrayish shadow dark:border-lightDark dark:bg-dark">
       <div>
         <img
           className="h-72 w-full rounded-t-lg object-cover object-center"
@@ -30,7 +30,7 @@ function Card({ place }: CardProps) {
           {place.info.briefInfo[currLang]}
         </p>
 
-        <Link to={`/place/${place._id}`}>
+        <Link to={`/vicinity/${place._id}`}>
           <Btn
             size="default"
             variant="default"
@@ -41,7 +41,7 @@ function Card({ place }: CardProps) {
           </Btn>
         </Link>
       </div>
-    </div>
+    </li>
   );
 }
 
