@@ -1,4 +1,6 @@
-{
+import { Translate } from '../../../types/Translate';
+
+const en = JSON.parse(`{
   "page": {
     "navigation": {
       "home": "Home",
@@ -15,7 +17,6 @@
     },
     "loading": "Loading"
   },
-
   "langList": {
     "english": {
       "text": "English",
@@ -30,7 +31,6 @@
       "imgAltText": ""
     }
   },
-
   "homepage": {
     "title": {
       "firstPart": "We make your",
@@ -45,31 +45,30 @@
       "btn": "Show more...",
       "kuba": {
         "title": "House very well maintained",
-        "text": "Highly recommend, includes all the necessary things to stay with a child! Very nice and quick contact with the owners, who will help solve any possible problem.\"",
+        "text": "Highly recommend, includes all the necessary things to stay with a child! Very nice and quick contact with the owners, who will help solve any possible problem.",
         "userName": "Kuba",
         "imgAltText": ""
       },
       "monika": {
         "title": "Luxuriously furnished house",
-        "text": "I highly recommend a vacation in this beautiful house. Charming town, beach, and plenty of water activities. Perfect place to relax and get away from everyday life.\"",
+        "text": "I highly recommend a vacation in this beautiful house. Charming town, beach, and plenty of water activities. Perfect place to relax and get away from everyday life.",
         "userName": "Monika",
         "imgAltText": ""
       },
       "nik": {
         "title": "Literally everything you need",
-        "text": "The neighborhood is quiet. Lots of restaurants. Very helpful staff. The owner to get along in every subject. Ms. Anita very helpful you can always ask for help.\"",
+        "text": "The neighborhood is quiet. Lots of restaurants. Very helpful staff. The owner to get along in every subject. Ms. Anita very helpful you can always ask for help.",
         "userName": "Nik",
         "imgAltText": ""
       },
       "adam": {
         "title": "A great place for vacation",
-        "text": "You live comfortably, conveniently, two bathrooms, there is internet, well, and there is a warm pool, close to markets, close to the sea, there is a place to park a car.\"",
+        "text": "You live comfortably, conveniently, two bathrooms, there is internet, well, and there is a warm pool, close to markets, close to the sea, there is a place to park a car.",
         "userName": "Adam",
         "imgAltText": ""
       }
     }
   },
-
   "about": {
     "title": "Information about the house with photos",
     "infoBtn": {
@@ -106,7 +105,6 @@
       "pool": "Stylish villa with swimming pool and patio, offering a serene and elegant outdoor space."
     }
   },
-
   "vicinity": {
     "title": "Places we recommend to visit",
     "subtitle": "Must-See Destinations for Your Next Adventure",
@@ -116,7 +114,6 @@
     },
     "limit": {
       "first": "3 Items on page",
-      "second": "6 Items on page",
       "third": "9 Items on page"
     },
     "btns": {
@@ -124,7 +121,6 @@
       "prev": "Prev"
     }
   },
-
   "contacts": {
     "title": "Booking Procedure",
     "bookProcedure": {
@@ -161,62 +157,12 @@
     "calendar": {
       "prev": "Prev month",
       "next": "Next month"
-    },
-    "weeks": {
-      "long": {
-        "monday": "Monday",
-        "tuesday": "Tuesday",
-        "wednesday": "Wednesday",
-        "thursday": "Thursday",
-        "friday": "Friday",
-        "saturday": "Saturday",
-        "Sunday": "Sunday"
-      },
-      "abbr": {
-        "monday": "Mon",
-        "tuesday": "Tue",
-        "wednesday": "Wed",
-        "thursday": "Thu",
-        "friday": "Fri",
-        "saturday": "Sat",
-        "Sunday": "Sun"
-      }
-    },
-    "months": {
-      "long": {
-        "january": "January",
-        "february": "February",
-        "march": "March",
-        "april": "April",
-        "may": "May",
-        "june": "June",
-        "july": "July",
-        "august": "August",
-        "september": "September",
-        "october": "October",
-        "november": "November",
-        "december": "December"
-      },
-      "abbr": {
-        "january": "Jan",
-        "february": "Feb",
-        "march": "Mar",
-        "april": "Apr",
-        "may": "May",
-        "june": "Jun",
-        "july": "Jul",
-        "august": "Aug",
-        "september": "Sep",
-        "october": "Oct",
-        "november": "Nov",
-        "december": "Dec"
-      }
     }
   },
-
   "place": {
     "route": "Generate route"
   },
-
   "errorMessage": "We are already working to solve the problem."
-}
+}`) as Translate;
+
+export default en;

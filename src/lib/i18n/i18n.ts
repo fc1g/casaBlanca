@@ -4,9 +4,9 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 import LOCALS from './constants';
-import en from './copies/en.json';
-import pl from './copies/pl.json';
-import es from './copies/es.json';
+import en from './copies/en';
+import pl from './copies/pl';
+import es from './copies/es';
 
 const resources = {
   [LOCALS.EN]: {

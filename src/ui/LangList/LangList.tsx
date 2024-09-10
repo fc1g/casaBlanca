@@ -33,7 +33,7 @@ function LangList() {
 
   return (
     <ul
-      className={`absolute top-[125%] z-[999999] transition-opacity duration-300 ${isOpenLangMenu ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'} rounded-lg bg-gray-300 text-dark dark:bg-dark dark:text-white`}
+      className={`absolute top-[125%] z-[999999] transition-opacity duration-300 ${isOpenLangMenu ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'} rounded-lg bg-gray-300 px-4 text-dark dark:bg-dark dark:text-white`}
     >
       <Lang
         src={engFlag}

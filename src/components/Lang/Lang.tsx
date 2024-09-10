@@ -10,11 +10,11 @@ function Lang({ src, translatePath, onClick }: LangProps) {
   const { t } = useGlobal()!;
 
   return (
-    <li>
+    <li className="w-24">
       <button
         onClick={onClick}
         type="button"
-        className="group block px-4 py-2 text-sm"
+        className="group block py-2 text-sm"
       >
         <div className="inline-flex items-center space-x-2">
           <img

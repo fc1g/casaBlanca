@@ -1,4 +1,6 @@
-{
+import { Translate } from '../../../types/Translate';
+
+const es = JSON.parse(`{
   "page": {
     "navigation": {
       "home": "Casa",
@@ -15,7 +17,6 @@
     },
     "loading": "Cargando"
   },
-
   "langList": {
     "english": {
       "text": "Inglés",
@@ -30,7 +31,6 @@
       "imgAltText": ""
     }
   },
-
   "homepage": {
     "title": {
       "firstPart": "Hacemos que tus",
@@ -45,31 +45,30 @@
       "btn": "Ver más...",
       "kuba": {
         "title": "Casa muy bien mantenida",
-        "text": "Muy recomendable, gran lugar, incluye todas las cosas necesarias para alojarse con un niño. Contacto muy agradable y rápido con los propietarios, quienes sugerirán y ayudarán a resolver cualquier problema posible.\"",
+        "text": "Muy recomendable, gran lugar, incluye todas las cosas necesarias para alojarse con un niño. Contacto muy agradable y rápido con los propietarios, quienes sugerirán y ayudarán a resolver cualquier problema posible.",
         "userName": "Kuba",
         "imgAltText": ""
       },
       "monika": {
         "title": "Casa nueva y lujosamente amueblada",
-        "text": "Recomiendo encarecidamente unas vacaciones en esta hermosa casa. Encantador pueblo, playa y muchas actividades acuáticas. Lugar perfecto para relajarse y escapar de la vida cotidiana.\"",
+        "text": "Recomiendo encarecidamente unas vacaciones en esta hermosa casa. Encantador pueblo, playa y muchas actividades acuáticas. Lugar perfecto para relajarse y escapar de la vida cotidiana.",
         "userName": "Monika",
         "imgAltText": ""
       },
       "nik": {
         "title": "Literalmente todo lo que necesitas",
-        "text": "El vecindario es tranquilo. Hay muchos restaurantes. El personal es muy servicial. El propietario se lleva bien en todos los temas. La Sra. Anita es muy servicial en el lugar, siempre puedes pedir ayuda.\"",
+        "text": "El vecindario es tranquilo. Hay muchos restaurantes. El personal es muy servicial. El propietario se lleva bien en todos los temas. La Sra. Anita es muy servicial en el lugar, siempre puedes pedir ayuda.",
         "userName": "Nik",
         "imgAltText": ""
       },
       "adam": {
         "title": "Un lugar excelente para vacaciones",
-        "text": "Se vive cómodamente, convenientemente, hay dos baños, hay internet, además hay una piscina climatizada, cerca de mercados, cerca del mar, hay lugar para estacionar un auto.\"",
+        "text": "Se vive cómodamente, convenientemente, hay dos baños, hay internet, además hay una piscina climatizada, cerca de mercados, cerca del mar, hay lugar para estacionar un auto.",
         "userName": "Adam",
         "imgAltText": ""
       }
     }
   },
-
   "about": {
     "title": "Información sobre la casa con fotos.",
     "infoBtn": {
@@ -106,7 +105,6 @@
       "pool": "Villa elegante con piscina y patio, ofreciendo un espacio exterior sereno y elegante."
     }
   },
-
   "vicinity": {
     "title": "Lugares que recomendamos visitar",
     "subtitle": "Destinos imprescindibles para tu próxima aventura",
@@ -116,7 +114,6 @@
     },
     "limit": {
       "first": "3 Elementos de la página",
-      "second": "6 Elementos de la página",
       "third": "9 Elementos de la página"
     },
     "btns": {
@@ -124,7 +121,6 @@
       "prev": "Anterior"
     }
   },
-
   "contacts": {
     "title": "Procedimiento de reserva",
     "bookProcedure": {
@@ -161,62 +157,13 @@
     "calendar": {
       "prev": "Prev month",
       "next": "Next month"
-    },
-    "weeks": {
-      "long": {
-        "monday": "Monday",
-        "tuesday": "Tuesday",
-        "wednesday": "Wednesday",
-        "thursday": "Thursday",
-        "friday": "Friday",
-        "saturday": "Saturday",
-        "Sunday": "Sunday"
-      },
-      "abbr": {
-        "monday": "Mon",
-        "tuesday": "Tue",
-        "wednesday": "Wed",
-        "thursday": "Thu",
-        "friday": "Fri",
-        "saturday": "Sat",
-        "Sunday": "Sun"
-      }
-    },
-    "months": {
-      "long": {
-        "january": "January",
-        "february": "February",
-        "march": "March",
-        "april": "April",
-        "may": "May",
-        "june": "June",
-        "july": "July",
-        "august": "August",
-        "september": "September",
-        "october": "October",
-        "november": "November",
-        "december": "December"
-      },
-      "abbr": {
-        "january": "Jan",
-        "february": "Feb",
-        "march": "Mar",
-        "april": "Apr",
-        "may": "May",
-        "june": "Jun",
-        "july": "Jul",
-        "august": "Aug",
-        "september": "Sep",
-        "october": "Oct",
-        "november": "Nov",
-        "december": "Dec"
-      }
     }
   },
-
   "place": {
     "route": "Generar ruta"
   },
-
   "errorMessage": "Ya estamos trabajando para resolver el problema."
 }
+`) as Translate;
+
+export default es;

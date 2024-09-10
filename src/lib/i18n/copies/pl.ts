@@ -1,4 +1,6 @@
-{
+import { Translate } from '../../../types/Translate';
+
+const pl = JSON.parse(`{
   "page": {
     "navigation": {
       "home": "Dom",
@@ -15,7 +17,6 @@
     },
     "loading": "Ładowanie"
   },
-
   "langList": {
     "english": {
       "text": "Angielski",
@@ -30,7 +31,6 @@
       "imgAltText": ""
     }
   },
-
   "homepage": {
     "title": {
       "firstPart": "Sprawiamy, że Twoje",
@@ -45,31 +45,30 @@
       "btn": "Pokaż więcej...",
       "kuba": {
         "title": "Dom bardzo dobrze utrzymany",
-        "text": "Gorąco polecam, świetne miejsce, zawiera wszystkie niezbędne rzeczy do pobytu z dzieckiem! Bardzo miły i szybki kontakt z właścicielami, którzy zaproponują i pomogą rozwiązać każdy możliwy problem.\"",
+        "text": "Gorąco polecam, świetne miejsce, zawiera wszystkie niezbędne rzeczy do pobytu z dzieckiem! Bardzo miły i szybki kontakt z właścicielami, którzy zaproponują i pomogą rozwiązać każdy możliwy problem.",
         "userName": "Kuba",
         "imgAltText": ""
       },
       "monika": {
         "title": "Nowy, luksusowo urządzony dom",
-        "text": "Gorąco polecam wakacje w tym pięknym domu. Urokliwe miasteczko, plaża i wiele aktywności wodnych. Doskonałe miejsce do relaksu i oderwania się od codziennego życia.\"",
+        "text": "Gorąco polecam wakacje w tym pięknym domu. Urokliwe miasteczko, plaża i wiele aktywności wodnych. Doskonałe miejsce do relaksu i oderwania się od codziennego życia.",
         "userName": "Monika",
         "imgAltText": ""
       },
       "nik": {
         "title": "Dosłownie wszystko, czego potrzebujesz",
-        "text": "Okolica jest cicha. Wiele restauracji. Bardzo pomocny personel. Właściciel jest do dogadania we wszystkich sprawach. Pani Anita bardzo pomocna na miejscu, zawsze możesz poprosić o pomoc.\"",
+        "text": "Okolica jest cicha. Wiele restauracji. Bardzo pomocny personel. Właściciel jest do dogadania we wszystkich sprawach. Pani Anita bardzo pomocna na miejscu, zawsze możesz poprosić o pomoc.",
         "userName": "Nik",
         "imgAltText": ""
       },
       "adam": {
         "title": "Wspaniałe miejsce na wakacje",
-        "text": "Mieszka się wygodnie, wygodnie, są dwa łazienki, jest internet, no i jest ciepły basen, blisko rynki, blisko morze, jest miejsce na zaparkowanie samochodu. Polecam\"",
+        "text": "Mieszka się wygodnie, wygodnie, są dwa łazienki, jest internet, no i jest ciepły basen, blisko rynki, blisko morze, jest miejsce na zaparkowanie samochodu. Polecam",
         "userName": "Adam",
         "imgAltText": ""
       }
     }
   },
-
   "about": {
     "title": "Informacje o domu z zdjęciami.",
     "infoBtn": {
@@ -106,7 +105,6 @@
       "pool": "Stylowa willa z basenem i patio, oferująca spokojną i elegancką przestrzeń na zewnątrz."
     }
   },
-
   "vicinity": {
     "title": "Miejsca, które polecamy odwiedzić",
     "subtitle": "Miejsca, które musisz zobaczyć podczas swojej następnej przygody",
@@ -116,7 +114,6 @@
     },
     "limit": {
       "first": "3 Pozycje na stronie",
-      "second": "6 Pozycje na stronie",
       "third": "9 Pozycje na stronie"
     },
     "btns": {
@@ -124,7 +121,6 @@
       "prev": "Poprzedni"
     }
   },
-
   "contacts": {
     "title": "Procedura rezerwacji",
     "bookProcedure": {
@@ -161,62 +157,13 @@
     "calendar": {
       "prev": "Prev month",
       "next": "Next month"
-    },
-    "weeks": {
-      "long": {
-        "monday": "Monday",
-        "tuesday": "Tuesday",
-        "wednesday": "Wednesday",
-        "thursday": "Thursday",
-        "friday": "Friday",
-        "saturday": "Saturday",
-        "Sunday": "Sunday"
-      },
-      "abbr": {
-        "monday": "Mon",
-        "tuesday": "Tue",
-        "wednesday": "Wed",
-        "thursday": "Thu",
-        "friday": "Fri",
-        "saturday": "Sat",
-        "Sunday": "Sun"
-      }
-    },
-    "months": {
-      "long": {
-        "january": "January",
-        "february": "February",
-        "march": "March",
-        "april": "April",
-        "may": "May",
-        "june": "June",
-        "july": "July",
-        "august": "August",
-        "september": "September",
-        "october": "October",
-        "november": "November",
-        "december": "December"
-      },
-      "abbr": {
-        "january": "Sty",
-        "february": "Lut",
-        "march": "Mar",
-        "april": "Kwi",
-        "may": "Maj",
-        "june": "Cze",
-        "july": "Lip",
-        "august": "Sie",
-        "september": "Wrz",
-        "october": "Paz",
-        "november": "Lis",
-        "december": "Gru"
-      }
     }
   },
-
   "place": {
     "route": "Generowanie trasy"
   },
-
   "errorMessage": "Już pracujemy nad rozwiązaniem problemu."
 }
+`) as Translate;
+
+export default pl;

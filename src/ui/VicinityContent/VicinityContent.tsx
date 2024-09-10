@@ -35,7 +35,7 @@ export default function OcolicaPlaces() {
             ))}
           </ul>
 
-          <div className="mb-16 mt-8 flex items-center justify-center">
+          <div className="mt-8 flex items-center justify-center">
             <OcolicaNavBtn
               disabled={currPage === '1'}
               onClick={() => paginationHandler(+currPage - 1)}

@@ -7,9 +7,7 @@ import useGlobal from '../../hooks/useGlobal';
 
 export default function OcolicaMenu() {
   const { t } = useGlobal()!;
-  const [search, setSearch] = useSearchParams({
-    limit: '6',
-  });
+  const [search, setSearch] = useSearchParams();
   const [openMenu, setOpenMenu] = useState<'sort' | 'limits' | ''>('');
 
   document.body.addEventListener('click', e => {
@@ -55,9 +53,6 @@ export default function OcolicaMenu() {
             <>
               <DropDownBtn onClick={() => setSearchParamsHandler('limit', '3')}>
                 {t('vicinity.limit.first')}
-              </DropDownBtn>
-              <DropDownBtn onClick={() => setSearchParamsHandler('limit', '6')}>
-                {t('vicinity.limit.second')}
               </DropDownBtn>
               <DropDownBtn onClick={() => setSearchParamsHandler('limit', '9')}>
                 {t('vicinity.limit.third')}
