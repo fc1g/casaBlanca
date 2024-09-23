@@ -29,7 +29,7 @@ function Chart() {
           className="text-lightDark dark:text-white"
           style={{ gridArea: '11 / 1 / 6 / 3' }}
         >
-          130
+          150
         </div>
 
         {/* 2 */}
@@ -43,7 +43,7 @@ function Chart() {
           className="text-lightDark dark:text-white"
           style={{ gridArea: '11 / 4 / 6 / 6' }}
         >
-          130
+          150
         </div>
         {/* 3 */}
         <div
@@ -72,7 +72,7 @@ function Chart() {
           className="text-lightDark dark:text-white"
           style={{ gridArea: '11 / 10 / 5 / 12' }}
         >
-          150
+          170
         </div>
         {/* 5 */}
         <div
@@ -171,7 +171,7 @@ function Chart() {
           className="text-lightDark dark:text-white"
           style={{ gridArea: '11 / 28 / 5 / 30' }}
         >
-          150
+          170
         </div>
         {/* 11 */}
         <div
