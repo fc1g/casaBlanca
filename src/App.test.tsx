@@ -1,14 +1,14 @@
 import '@testing-library/jest-dom';
 
-import { describe, expect, it } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
+import { describe, expect, it } from 'vitest';
 
 import { Suspense } from 'react';
 import App from './App';
 
-import Loader from './ui/Loader/Loader';
 import GlobalProvider from './context/globalContext';
+import Loader from './ui/Loader/Loader';
 
 describe('App', () => {
   it('should render notFound page if landing on a bad page', async () => {
