@@ -56,7 +56,7 @@ function Contacts() {
                 </li>
               </ul>
 
-              <p className="mt-4 text-left font-semibold text-primary-300">
+              <p className="mt-4 text-left font-semibold text-primary-800 dark:text-primary-300">
                 {t('contacts.deposit')}
               </p>
             </section>

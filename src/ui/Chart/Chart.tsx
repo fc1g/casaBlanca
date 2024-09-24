@@ -11,7 +11,7 @@ function Chart() {
   return (
     <div className="px-1 md:mb-0">
       <div
-        className="h-44 gap-x-[3px] border-b border-[#3f3f46] text-center text-xs md:text-sm [&:nth-child(odd)]:text-[0.6rem] [&:nth-child(odd)]:xs:text-xs [&:nth-child(odd)]:md:text-[0.5rem] [&:nth-child(odd)]:lg:text-sm"
+        className="h-44 gap-x-[3px] border-b border-[#3f3f46] text-center text-xs sm:gap-x-2 md:gap-x-[3px] md:text-sm [&:nth-child(odd)]:text-[0.6rem] [&:nth-child(odd)]:xs:text-xs [&:nth-child(odd)]:md:text-[0.5rem] [&:nth-child(odd)]:lg:text-sm"
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(35, 1fr)',
