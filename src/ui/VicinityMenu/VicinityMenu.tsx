@@ -32,30 +32,38 @@ export default function OcolicaMenu() {
     <div className="mb-12 flex flex-col">
       <div className="flex items-center justify-end p-6 text-white [&>div:nth-child(odd)]:border-r [&>div:nth-child(odd)]:border-gray-300 [&>div:nth-child(odd)]:dark:border-gray-600">
         <div className="px-4">
-          <DropDownMenu text="Sort" openMenu={openMenu} className="left-0">
+          <DropDownMenu
+            text={t('vicinity.sort')}
+            openMenu={openMenu}
+            className="left-0"
+          >
             <>
               <DropDownBtn
                 onClick={() => setSearchParamsHandler('sort', 'distance')}
               >
-                {t('vicinity.sort.low')}
+                {t('vicinity.sortTypes.low')}
               </DropDownBtn>
               <DropDownBtn
                 onClick={() => setSearchParamsHandler('sort', '-distance')}
               >
-                {t('vicinity.sort.high')}
+                {t('vicinity.sortTypes.high')}
               </DropDownBtn>
             </>
           </DropDownMenu>
         </div>
 
         <div className="px-4">
-          <DropDownMenu text="Limits" openMenu={openMenu} className="right-0">
+          <DropDownMenu
+            text={t('vicinity.limit')}
+            openMenu={openMenu}
+            className="right-0"
+          >
             <>
               <DropDownBtn onClick={() => setSearchParamsHandler('limit', '3')}>
-                {t('vicinity.limit.first')}
+                {t('vicinity.limitTypes.first')}
               </DropDownBtn>
               <DropDownBtn onClick={() => setSearchParamsHandler('limit', '9')}>
-                {t('vicinity.limit.third')}
+                {t('vicinity.limitTypes.third')}
               </DropDownBtn>
             </>
           </DropDownMenu>
@@ -66,7 +74,7 @@ export default function OcolicaMenu() {
 
       <div className="flex items-center p-6">
         <div className="mr-4 border-r border-gray-300 pr-4 text-lightDark dark:border-gray-600 dark:text-gray-300">
-          Filters
+          {t('vicinity.filters')}
         </div>
 
         <ul className="flex items-center space-x-4">

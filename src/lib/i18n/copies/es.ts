@@ -108,11 +108,14 @@ const es = JSON.parse(`{
   "vicinity": {
     "title": "Lugares que recomendamos visitar",
     "subtitle": "Destinos imprescindibles para tu próxima aventura",
-    "sort": {
+    "filters": "Filtros",
+    "sort": "Ordenar",
+    "limit": "Límite",
+    "sortTypes": {
       "low": "Distancia: Bajo a Alto",
       "high": "Distancia: Alto a Bajo"
     },
-    "limit": {
+    "limitTypes": {
       "first": "3 Elementos de la página",
       "third": "9 Elementos de la página"
     },
@@ -122,7 +125,25 @@ const es = JSON.parse(`{
     }
   },
   "contacts": {
-    "title": "Procedimiento de reserva",
+    "title": "Procedimiento de reserva","monthPriceTitle": "Precio mensual",
+    "months": {
+      "october": "Octubre",
+      "november": "Noviembre",
+      "christmasNewYear": "Navidad y Año Nuevo (2 semanas)",
+      "march": "Marzo",
+      "april": "Abril"
+    },
+    "fullPrice": "precio completo",
+    "deposit": "Depósito: Reembolsable después de la estancia, 300 euros.",
+    "cleaning": "Limpieza",
+    "cleaningFee": "140 euros (pago único).",
+    "linen": "Juego de sábanas con lavado",
+    "linenFee": "13 euros por persona.",
+    "discount": "Más de 10 días",
+    "discountDetails": "Descuento del 5% sobre el costo total.",
+    "individualDiscounts": "Descuentos individuales posibles con menos personas en casos excepcionales.",
+    "extraPerson": "9ª persona",
+    "extraPersonFee": "Pago adicional de 40 euros/día (solo en casos excepcionales).",
     "bookProcedure": {
       "firstCol": {
         "firstPart": "Estamos disponibles en",
@@ -143,11 +164,17 @@ const es = JSON.parse(`{
       "mail": "Correo",
       "firstPart": {
         "title": "¿Todavía tienes preguntas? Llama a Ewelina Kwaśna.",
-        "customeText": "Dirección"
+        "customeText": "Dirección",
+        "phoneNumber": "+48661128981",
+        "email": "Casablancaespaniol@gmail.com",
+        "customeData": "San Pedro"
       },
       "secondPart": {
         "title": "Para reservas, contacta con Anita Kolodziejczyk.",
-        "customeText": "Página web"
+        "customeText": "Página web",
+        "phoneNumber": "+34659901386",
+        "email": "Info@avsinmo.com",
+        "customeData": "Avsinmo.com"
       },
       "important": {
         "firstPart": "Por favor, ten paciencia;",

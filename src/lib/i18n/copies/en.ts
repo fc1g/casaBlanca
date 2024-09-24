@@ -108,11 +108,14 @@ const en = JSON.parse(`{
   "vicinity": {
     "title": "Places we recommend to visit",
     "subtitle": "Must-See Destinations for Your Next Adventure",
-    "sort": {
+    "filters": "Filters",
+    "sort": "Sort",
+    "limit": "Limit",
+    "sortTypes": {
       "low": "Distance: Low to High",
       "high": "Distance: High to Low"
     },
-    "limit": {
+    "limitTypes": {
       "first": "3 Items on page",
       "third": "9 Items on page"
     },
@@ -123,6 +126,25 @@ const en = JSON.parse(`{
   },
   "contacts": {
     "title": "Booking Procedure",
+    "monthPriceTitle": "Month price (monthly)",
+    "months": {
+      "october": "October",
+      "november": "November",
+      "christmasNewYear": "Christmas and New Year (2 weeks)",
+      "march": "March",
+      "april": "April"
+    },
+    "fullPrice": "full price",
+    "deposit": "Deposit: Refundable after the stay, 300 euros.",
+     "cleaning": "Cleaning",
+    "cleaningFee": "140 euro (one-time fee).",
+    "linen": "Linen set with washing",
+    "linenFee": "13 euro per person.",
+    "discount": "Over 10 days",
+    "discountDetails": "5% discount from the total cost.",
+    "individualDiscounts": "Individual discounts are possible with fewer people in exceptional cases.",
+    "extraPerson": "9th person",
+    "extraPersonFee": "Additional payment 40 euro/day (only in exceptional cases).",
     "bookProcedure": {
       "firstCol": {
         "firstPart": "We are available on",
@@ -143,11 +165,17 @@ const en = JSON.parse(`{
       "mail": "Mail",
       "firstPart": {
         "title": "Still have questions ? Call Ewelina Kwaśna",
-        "customeText": "Address"
+        "customeText": "Address",
+        "phoneNumber": "+48661128981",
+        "email": "Casablancaespaniol@gmail.com",
+        "customeData": "San Pedro"
       },
       "secondPart": {
         "title": "For reservations, contact Anita Kolodziejczyk",
-        "customeText": "Web page"
+        "customeText": "Web page",
+        "phoneNumber": "+34659901386",
+        "email": "Info@avsinmo.com",
+        "customeData": "Avsinmo.com"
       },
       "important": {
         "firstPart": "Please be patient;",

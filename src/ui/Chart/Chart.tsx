@@ -11,7 +11,7 @@ function Chart() {
   return (
     <div className="px-1 md:mb-0">
       <div
-        className="h-44 gap-x-[3px] border-b border-[#3f3f46] text-center text-xs md:text-sm"
+        className="h-44 gap-x-[3px] border-b border-[#3f3f46] text-center text-xs md:text-sm [&:nth-child(odd)]:text-[0.6rem] [&:nth-child(odd)]:xs:text-xs [&:nth-child(odd)]:md:text-[0.5rem] [&:nth-child(odd)]:lg:text-sm"
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(35, 1fr)',
@@ -20,196 +20,137 @@ function Chart() {
       >
         {/* 1 */}
         <div
-          className="bg-gray-300 dark:bg-white"
+          className="bg-primary-800 dark:bg-primary-300"
           style={{ gridArea: '11 / 1 / 7 / 3' }}
         />
-        <div className="bg-blue-500" style={{ gridArea: '11 / 1 / 10 / 3' }} />
-        <div className="bg-yellow-500" style={{ gridArea: '10 / 1 / 9 / 3' }} />
         <div
           className="text-lightDark dark:text-white"
           style={{ gridArea: '11 / 1 / 6 / 3' }}
         >
-          150
+          150€
         </div>
 
         {/* 2 */}
         <div
-          className="bg-gray-300 dark:bg-white"
+          className="bg-primary-800 dark:bg-primary-300"
           style={{ gridArea: '11 / 4 / 7 / 6' }}
         />
-        <div className="bg-blue-500" style={{ gridArea: '11 / 4 / 10 / 6' }} />
-        <div className="bg-yellow-500" style={{ gridArea: '10 / 4 / 9 / 6' }} />
         <div
           className="text-lightDark dark:text-white"
           style={{ gridArea: '11 / 4 / 6 / 6' }}
         >
-          150
+          150€
         </div>
         {/* 3 */}
         <div
-          className="bg-gray-300 dark:bg-white"
-          style={{ gridArea: '11 / 7 / 6 / 9' }}
+          className="bg-primary-800 dark:bg-primary-300"
+          style={{ gridArea: '11 / 7 / 7 / 9' }}
         />
-        <div className="bg-blue-500" style={{ gridArea: '11 / 7 / 10 / 9' }} />
-        <div className="bg-yellow-500" style={{ gridArea: '10 / 7 / 9 / 9' }} />
         <div
           className="text-lightDark dark:text-white"
-          style={{ gridArea: '11 / 7 / 5 / 9' }}
+          style={{ gridArea: '11 / 7 / 6 / 9' }}
         >
-          150
+          150€
         </div>
         {/* 4 */}
         <div
-          className="bg-gray-300 dark:bg-white"
-          style={{ gridArea: '11 / 10 / 6 / 12' }}
-        />
-        <div className="bg-blue-500" style={{ gridArea: '11 / 10 / 9 / 12' }} />
-        <div
-          className="bg-yellow-500"
-          style={{ gridArea: '9 / 10 / 7 / 12' }}
+          className="bg-primary-800 dark:bg-primary-300"
+          style={{ gridArea: '11 / 10 / 5 / 12' }}
         />
         <div
           className="text-lightDark dark:text-white"
-          style={{ gridArea: '11 / 10 / 5 / 12' }}
+          style={{ gridArea: '11 / 10 / 4 / 12' }}
         >
-          170
+          170€
         </div>
         {/* 5 */}
         <div
-          className="bg-gray-300 dark:bg-white"
+          className="bg-primary-800 dark:bg-primary-300"
           style={{ gridArea: '11 / 13 / 5 / 15' }}
-        />
-        <div className="bg-blue-500" style={{ gridArea: '11 / 13 / 9 / 15' }} />
-        <div
-          className="bg-yellow-500"
-          style={{ gridArea: '9 / 13 / 7 / 15' }}
         />
         <div
           className="text-lightDark dark:text-white"
           style={{ gridArea: '11 / 13 / 4 / 15' }}
         >
-          170
+          170€
         </div>
         {/* 6 */}
         <div
-          className="bg-gray-300 dark:bg-white"
+          className="bg-primary-800 dark:bg-primary-300"
           style={{ gridArea: '11 / 16 / 4 / 18' }}
-        />
-        <div className="bg-blue-500" style={{ gridArea: '11 / 16 / 8 / 18' }} />
-        <div
-          className="bg-yellow-500"
-          style={{ gridArea: '8 / 16 / 5 / 18' }}
         />
         <div
           className="text-lightDark dark:text-white"
           style={{ gridArea: '11 / 16 / 3 / 18' }}
         >
-          200
+          200€
         </div>
         {/* 7 */}
         <div
-          className="bg-gray-300 dark:bg-white"
+          className="bg-primary-800 dark:bg-primary-300"
           style={{ gridArea: '11 / 19 / 3 / 21' }}
-        />
-        <div className="bg-blue-500" style={{ gridArea: '11 / 19 / 8 / 21' }} />
-        <div
-          className="bg-yellow-500"
-          style={{ gridArea: '8 / 19 / 5 / 21' }}
         />
         <div
           className="text-lightDark dark:text-white"
           style={{ gridArea: '11 / 19 / 2 / 21' }}
         >
-          250
+          250€
         </div>
         {/* 8 */}
         <div
-          className="bg-gray-300 dark:bg-white"
+          className="bg-primary-800 dark:bg-primary-300"
           style={{ gridArea: '11 / 22 / 2 / 24' }}
-        />
-        <div className="bg-blue-500" style={{ gridArea: '11 / 22 / 9 / 24' }} />
-        <div
-          className="bg-yellow-500"
-          style={{ gridArea: '9 / 22 / 7 / 24' }}
         />
         <div
           className="text-lightDark dark:text-white"
           style={{ gridArea: '11 / 22 / 1 / 24' }}
         >
-          280
+          280€
         </div>
         {/* 9 */}
         <div
-          className="bg-gray-300 dark:bg-white"
+          className="bg-primary-800 dark:bg-primary-300"
           style={{ gridArea: '11 / 25 / 4 / 27' }}
-        />
-        <div className="bg-blue-500" style={{ gridArea: '11 / 25 / 9 / 27' }} />
-        <div
-          className="bg-yellow-500"
-          style={{ gridArea: '9 / 25 / 7 / 27' }}
         />
         <div
           className="text-lightDark dark:text-white"
           style={{ gridArea: '11 / 25 / 3 / 27' }}
         >
-          200
+          200€
         </div>
         {/* 10 */}
         <div
-          className="bg-gray-300 dark:bg-white"
-          style={{ gridArea: '11 / 28 / 6 / 30' }}
-        />
-        <div
-          className="bg-blue-500"
-          style={{ gridArea: '11 / 28 / 10 / 30' }}
-        />
-        <div
-          className="bg-yellow-500"
-          style={{ gridArea: '10 / 28 / 9 / 30' }}
+          className="bg-primary-800 dark:bg-primary-300"
+          style={{ gridArea: '11 / 28 / 5 / 30' }}
         />
         <div
           className="text-lightDark dark:text-white"
-          style={{ gridArea: '11 / 28 / 5 / 30' }}
+          style={{ gridArea: '11 / 28 / 4 / 30' }}
         >
-          170
+          170€
         </div>
         {/* 11 */}
         <div
-          className="bg-gray-300 dark:bg-white"
-          style={{ gridArea: '11 / 31 / 6 / 33' }}
-        />
-        <div
-          className="bg-blue-500"
-          style={{ gridArea: '11 / 31 / 10 / 33' }}
-        />
-        <div
-          className="bg-yellow-500"
-          style={{ gridArea: '10 / 31 / 9 / 33' }}
+          className="bg-primary-800 dark:bg-primary-300"
+          style={{ gridArea: '11 / 31 / 7 / 33' }}
         />
         <div
           className="text-lightDark dark:text-white"
-          style={{ gridArea: '11 / 31 / 5 / 33' }}
+          style={{ gridArea: '11 / 31 / 6 / 33' }}
         >
-          150
+          150€
         </div>
         {/* 12 */}
         <div
-          className="bg-gray-300 dark:bg-white"
-          style={{ gridArea: '11 / 34 / 6 / 36' }}
+          className="bg-primary-800 dark:bg-primary-300"
+          style={{ gridArea: '11 / 34 / 7 / 36' }}
         />
-        <div
-          className="bg-blue-500"
-          style={{ gridArea: '11 / 34 / 10 / 36' }}
-        />
-        <div
-          className="bg-yellow-500"
-          style={{ gridArea: '10 / 34 / 9 / 36' }}
-        />
+
         <div
           className="text-lightDark dark:text-white"
-          style={{ gridArea: '11 / 34 / 5 / 36' }}
+          style={{ gridArea: '11 / 34 / 6 / 36' }}
         >
-          150
+          150€
         </div>
       </div>
 

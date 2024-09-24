@@ -108,11 +108,14 @@ const pl = JSON.parse(`{
   "vicinity": {
     "title": "Miejsca, które polecamy odwiedzić",
     "subtitle": "Miejsca, które musisz zobaczyć podczas swojej następnej przygody",
-    "sort": {
+    "filters": "Filtry",
+    "sort": "Sortuj",
+    "limit": "Limit",
+    "sortTypes": {
       "low": "Odległość: Niski do Wysokiego",
       "high": "Odległość: Od wysokiego do niskiego"
     },
-    "limit": {
+    "limitTypes": {
       "first": "3 Pozycje na stronie",
       "third": "9 Pozycje na stronie"
     },
@@ -123,6 +126,25 @@ const pl = JSON.parse(`{
   },
   "contacts": {
     "title": "Procedura rezerwacji",
+    "monthPriceTitle": "Cena za miesiąc (miesięcznie)",
+    "months": {
+      "october": "Październik",
+      "november": "Listopad",
+      "christmasNewYear": "Święta Bożego Narodzenia i Nowy Rok (2 tygodnie)",
+      "march": "Marzec",
+      "april": "Kwiecień"
+    },
+    "fullPrice": "całkowity koszt",
+    "deposit": "Kaucja: Zwracana po pobycie, 300 euro.",
+    "cleaning": "Sprzątanie",
+    "cleaningFee": "140 euro (jednorazowa opłata).",
+    "linen": "Komplet pościeli z praniem",
+    "linenFee": "13 euro za osobę.",
+    "discount": "Powyżej 10 dni",
+    "discountDetails": "5% rabatu od całkowitego kosztu.",
+    "individualDiscounts": "Indywidualne rabaty możliwe przy mniejszej liczbie osób w wyjątkowych przypadkach.",
+    "extraPerson": "9-ta osoba",
+    "extraPersonFee": "Dodatkowa opłata 40 euro/doba (tylko w wyjątkowych przypadkach).",
     "bookProcedure": {
       "firstCol": {
         "firstPart": "Jesteśmy dostępni na",
@@ -143,11 +165,17 @@ const pl = JSON.parse(`{
       "mail": "E-mail",
       "firstPart": {
         "title": "Masz jeszcze pytania? Zadzwoń do Eweliny Kwaśnej",
-        "customeText": "Adres"
+        "customeText": "Adres",
+        "phoneNumber": "+48661128981",
+        "email": "Casablancaespaniol@gmail.com",
+        "customeData": "San Pedro"
       },
       "secondPart": {
         "title": "W sprawie rezerwacji skontaktuj się z Anitą Kołodziejczyk.",
-        "customeText": "Strona"
+        "customeText": "Strona",
+        "phoneNumber": "+34659901386",
+        "email": "Info@avsinmo.com",
+        "customeData": "Avsinmo.com"
       },
       "important": {
         "firstPart": "Prosimy o cierpliwość;",

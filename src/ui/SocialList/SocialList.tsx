@@ -15,8 +15,6 @@ function SocialList() {
         icon={`${sprite}#icon-instagram`}
         desc="Instagram"
       />
-
-      <Social href="https://x.com/" icon={`${sprite}#icon-x`} desc="X" />
     </ul>
   );
 }

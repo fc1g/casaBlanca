@@ -2,11 +2,11 @@ import Chart from '../../ui/Chart/Chart';
 import Title from '../../ui/Title/Title';
 import TextCard from '../../components/TextCard/TextCard';
 import Link from '../../components/Link/Link';
-import Accordion from '../../ui/Accordion/Accordion';
 
 import useGlobal from '../../hooks/useGlobal';
 import Calendar from '../../ui/Calendar/Calendar';
 import Page from '../../ui/Page/Page';
+import ContactsAccordion from '../../ui/ContactsAccordion/ContactsAccordion';
 
 function Contacts() {
   const { t } = useGlobal()!;
@@ -16,9 +16,51 @@ function Contacts() {
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:py-16">
         <Title title={t('contacts.title')} subtitle={t('contacts.subtitle')} />
 
-        <div className="my-24 grid grid-cols-1 gap-16 md:grid-cols-2">
-          <Chart />
+        <div className="my-24 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-16">
+          <div>
+            <Chart />
 
+            <section className="my-8">
+              <Title title={t('contacts.monthPriceTitle')} subtitle="" />
+
+              <ul className="space-y-2 text-left text-gray-300 lg:-mt-8">
+                <li>
+                  <span className="font-semibold text-white">
+                    {t('contacts.months.october')}:
+                  </span>{' '}
+                  2500 euro — {t('contacts.fullPrice')}
+                </li>
+                <li>
+                  <span className="font-semibold text-white">
+                    {t('contacts.months.november')}:
+                  </span>{' '}
+                  2300 euro — {t('contacts.fullPrice')}
+                </li>
+                <li>
+                  <span className="font-semibold text-white">
+                    {t('contacts.months.christmasNewYear')}:
+                  </span>{' '}
+                  2500 euro — {t('contacts.fullPrice')}
+                </li>
+                <li>
+                  <span className="font-semibold text-white">
+                    {t('contacts.months.march')}:
+                  </span>{' '}
+                  2200 euro — {t('contacts.fullPrice')}
+                </li>
+                <li>
+                  <span className="font-semibold text-white">
+                    {t('contacts.months.april')}:
+                  </span>{' '}
+                  2500 euro — {t('contacts.fullPrice')}
+                </li>
+              </ul>
+
+              <p className="mt-4 text-left font-semibold text-primary-300">
+                {t('contacts.deposit')}
+              </p>
+            </section>
+          </div>
           <Calendar />
         </div>
 
@@ -42,13 +84,38 @@ function Contacts() {
           <TextCard>{t('contacts.bookProcedure.secondCol')}</TextCard>
 
           <TextCard>{t('contacts.bookProcedure.thirdCol')}</TextCard>
+          <TextCard>
+            <p>
+              <span className="font-semibold">{t('contacts.cleaning')}:</span>{' '}
+              {t('contacts.cleaningFee')} <br />
+              <span className="font-semibold">{t('contacts.linen')}:</span>{' '}
+              {t('contacts.linenFee')}
+            </p>
+          </TextCard>
+
+          <TextCard>
+            <p>
+              <span className="font-semibold">{t('contacts.discount')}:</span>{' '}
+              {t('contacts.discountDetails')} <br />
+              {t('contacts.individualDiscounts')}
+            </p>
+          </TextCard>
+          <TextCard>
+            <p>
+              <span className="font-semibold">
+                {t('contacts.extraPerson')}:
+              </span>{' '}
+              {t('contacts.extraPersonFee')}
+            </p>
+          </TextCard>
+
           <TextCard>{t('contacts.paymentSchedule.firstCol')}</TextCard>
 
           <TextCard>{t('contacts.paymentSchedule.secondCol')}</TextCard>
           <TextCard>{t('contacts.paymentSchedule.thirdCol')}</TextCard>
         </ul>
 
-        <Accordion />
+        <ContactsAccordion />
       </div>
     </Page>
   );
