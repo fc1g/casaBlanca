@@ -23,33 +23,33 @@ function Contacts() {
             <section className="my-8">
               <Title title={t('contacts.monthPriceTitle')} subtitle="" />
 
-              <ul className="space-y-2 text-left text-gray-300 lg:-mt-8">
+              <ul className="space-y-2 text-left text-gray-700 lg:-mt-8 dark:text-gray-300">
                 <li>
-                  <span className="font-semibold text-white">
+                  <span className="font-semibold text-dark dark:text-white">
                     {t('contacts.months.october')}:
                   </span>{' '}
                   2500 euro — {t('contacts.fullPrice')}
                 </li>
                 <li>
-                  <span className="font-semibold text-white">
+                  <span className="font-semibold text-dark dark:text-white">
                     {t('contacts.months.november')}:
                   </span>{' '}
                   2300 euro — {t('contacts.fullPrice')}
                 </li>
                 <li>
-                  <span className="font-semibold text-white">
+                  <span className="font-semibold text-dark dark:text-white">
                     {t('contacts.months.christmasNewYear')}:
                   </span>{' '}
                   2500 euro — {t('contacts.fullPrice')}
                 </li>
                 <li>
-                  <span className="font-semibold text-white">
+                  <span className="font-semibold text-dark dark:text-white">
                     {t('contacts.months.march')}:
                   </span>{' '}
                   2200 euro — {t('contacts.fullPrice')}
                 </li>
                 <li>
-                  <span className="font-semibold text-white">
+                  <span className="font-semibold text-dark dark:text-white">
                     {t('contacts.months.april')}:
                   </span>{' '}
                   2500 euro — {t('contacts.fullPrice')}
@@ -86,25 +86,22 @@ function Contacts() {
           <TextCard>{t('contacts.bookProcedure.thirdCol')}</TextCard>
           <TextCard>
             <p>
-              <span className="font-semibold">{t('contacts.cleaning')}:</span>{' '}
-              {t('contacts.cleaningFee')} <br />
-              <span className="font-semibold">{t('contacts.linen')}:</span>{' '}
-              {t('contacts.linenFee')}
+              <span>{t('contacts.cleaning')}:</span> {t('contacts.cleaningFee')}{' '}
+              <br />
+              <span>{t('contacts.linen')}:</span> {t('contacts.linenFee')}
             </p>
           </TextCard>
 
           <TextCard>
             <p>
-              <span className="font-semibold">{t('contacts.discount')}:</span>{' '}
+              <span>{t('contacts.discount')}:</span>{' '}
               {t('contacts.discountDetails')} <br />
               {t('contacts.individualDiscounts')}
             </p>
           </TextCard>
           <TextCard>
             <p>
-              <span className="font-semibold">
-                {t('contacts.extraPerson')}:
-              </span>{' '}
+              <span>{t('contacts.extraPerson')}:</span>{' '}
               {t('contacts.extraPersonFee')}
             </p>
           </TextCard>
