@@ -11,7 +11,7 @@ function SocialList() {
       />
 
       <Social
-        href="https://www.instagram.com/"
+        href="https://www.instagram.com/casablanca_privateheatedpool?igsh=d2F5ZjJhOTJwdXBn"
         icon={`${sprite}#icon-instagram`}
         desc="Instagram"
       />
