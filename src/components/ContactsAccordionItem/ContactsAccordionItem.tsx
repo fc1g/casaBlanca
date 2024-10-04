@@ -8,10 +8,11 @@ import {
 import { Dispatch } from 'react';
 import useGlobal from '../../hooks/useGlobal';
 import Link from '../Link/Link';
+import Children from '../../types/Children';
 
 type Active = 'top' | 'middle' | 'bottom';
 
-type TestAccordionProps = {
+type ContactsAccordionItemProps = {
   active: Active | null;
   type: Active;
   i18Code: string;
@@ -19,13 +20,13 @@ type TestAccordionProps = {
   children: React.ReactNode;
 };
 
-export default function TestAccordion({
+export default function ContactsAccordionItem({
   active,
   setActive,
   type,
   i18Code,
   children,
-}: TestAccordionProps) {
+}: ContactsAccordionItemProps) {
   const { t } = useGlobal()!;
 
   return (
@@ -46,12 +47,10 @@ export default function TestAccordion({
       <div className={`${!(active === type) && 'hidden'}`}>
         <div className="border border-gray-200 p-5 dark:border-gray-700">
           <div className="mb-2 text-center text-gray-600 lg:text-left dark:text-gray-300">
-            <ul className="flex flex-col items-center justify-center space-y-6 p-3 sm:flex-row sm:space-x-8 sm:space-y-0">
-              {children}
-            </ul>
+            {children}
           </div>
 
-          <p className="text-center text-sm text-lightDark dark:text-gray-300">
+          <p className="text-center text-xs text-lightDark sm:text-sm dark:text-gray-300">
             <strong>
               <span className="text-red-800 dark:text-red-300">
                 {t('contacts.accordion.important.firstPart')}
@@ -160,6 +159,15 @@ function CustomeData({
   );
 }
 
-TestAccordion.Phone = Phone;
-TestAccordion.Email = Email;
-TestAccordion.CustomeData = CustomeData;
+function Container({ children }: Children) {
+  return (
+    <ul className="flex flex-col items-center justify-center space-y-6 p-3 sm:flex-row sm:space-x-8 sm:space-y-0">
+      {children}
+    </ul>
+  );
+}
+
+ContactsAccordionItem.Phone = Phone;
+ContactsAccordionItem.Email = Email;
+ContactsAccordionItem.CustomeData = CustomeData;
+ContactsAccordionItem.Container = Container;

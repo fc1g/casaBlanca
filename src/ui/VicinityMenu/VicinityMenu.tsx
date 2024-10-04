@@ -8,14 +8,14 @@ import useGlobal from '../../hooks/useGlobal';
 export default function OcolicaMenu() {
   const { t } = useGlobal()!;
   const [search, setSearch] = useSearchParams();
-  const [openMenu, setOpenMenu] = useState<'sort' | 'limits' | ''>('');
+  const [openMenu, setOpenMenu] = useState<'sort' | 'limit' | ''>('');
 
   document.body.addEventListener('click', e => {
     const target = (e.target as HTMLElement).closest('.dropDownBtn');
 
     setOpenMenu(
       target && openMenu !== target.getAttribute('data-type')
-        ? (target.getAttribute('data-type') as 'sort' | 'limits')
+        ? (target.getAttribute('data-type') as 'sort' | 'limit')
         : ''
     );
   });

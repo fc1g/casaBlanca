@@ -168,14 +168,24 @@ const pl = JSON.parse(`{
         "customeText": "Adres",
         "phoneNumber": "+48661128981",
         "email": "Casablancaespaniol@gmail.com",
-        "customeData": "San Pedro"
+        "customeData": "San Pedro",
+        "importantLang": {
+          "firstPart": "Pani Ewelina mówi",
+          "only": "tylko",
+          "secondPart": "po polsku, więc jeśli masz jakieś pytania, lepiej napisać po polsku."
+        }
       },
       "secondPart": {
         "title": "W sprawie rezerwacji skontaktuj się z Anitą Kołodziejczyk.",
         "customeText": "Strona",
         "phoneNumber": "+34659901386",
         "email": "Info@avsinmo.com",
-        "customeData": "Avsinmo.com"
+        "customeData": "Avsinmo.com",
+        "importantLang": {
+          "firstPart": "Pani Anita mówi",
+          "only": "tylko",
+          "secondPart": "po polsku, hiszpańsku i angielsku, więc jeśli masz jakieś pytania, lepiej napisać."
+        }
       },
       "important": {
         "firstPart": "Prosimy o cierpliwość;",

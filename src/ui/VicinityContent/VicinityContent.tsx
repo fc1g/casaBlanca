@@ -43,7 +43,9 @@ export default function OcolicaPlaces() {
             />
 
             <OcolicaNavBtn
-              disabled={+currPage * (+search.get('limit')! || 6) > data.results}
+              disabled={
+                +currPage * (+search.get('limit')! || 6) >= data.results
+              }
               onClick={() => paginationHandler(+currPage + 1)}
               type="next"
             />
