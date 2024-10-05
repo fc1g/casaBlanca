@@ -88,6 +88,10 @@ const pl = JSON.parse(`{
       "rentInfo": {
         "firstPart": "Warto wspomnieć, że jesteśmy obecni zarówno na Booking.com, jak i Airbnb. Jeśli nie masz pewności, możesz zarezerwować naszą nieruchomość przez te dwie popularne usługi. Jednakże, aby zaoszczędzić pieniądze, możesz bezpiecznie zarezerwować bezpośrednio u nas, wysyłając wiadomość lub dzwoniąc, aby ustalić daty.",
         "secondPart": "Gdy będziesz gotowy do dokonania rezerwacji, proszę skontaktować się z panią Anitą Violetta Kołodziejczyk. Ona jest odpowiedzialna za Twoją rezerwację i będzie na miejscu, aby pomóc Ci w dokonaniu rezerwacji."
+      },
+      "transfer": {
+        "firstPart": "Z lotniska można wynająć auto. Mogę polecić firmy lub wybrać samochód z znanych wypożyczalni na miejscu, na przykład: Odkryj Auto, Record Go. Autobus do miasta kursuje rzadko, ale bezpośrednio lub przez Murcię.",
+        "secondPart": "Transfery i wypożyczalnie aut (Viva Cars, !Hola!, Alicante Taxi, Calma) są również dostępne. Kontakt przez WhatsApp lub Messenger. Po wylądowaniu udaj się na górny poziom lotniska, gdzie zazwyczaj czeka się na samochód w Starbucks."
       }
     },
     "slider": {

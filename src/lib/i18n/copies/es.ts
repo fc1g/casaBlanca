@@ -88,6 +88,10 @@ const es = JSON.parse(`{
       "rentInfo": {
         "firstPart": "Vale la pena mencionar que estamos presentes tanto en Booking.com como en Airbnb. Si no te sientes seguro, puedes reservar la propiedad a través de estos dos servicios populares. Sin embargo, para ahorrar dinero, siéntete libre de reservar directamente con nosotros enviando un mensaje o llamándonos para coordinar las fechas.",
         "secondPart": "Una vez que estés listo para hacer una reserva, por favor contacta con la Sra. Anita Violetta Kołodziejczyk. Ella es responsable de tu reserva y estará en el lugar para ayudarte con la misma."
+      },
+      "transfer": {
+        "firstPart": "Desde el aeropuerto se puede alquilar un coche. Puedo recomendar empresas o elegir un coche de alquileres conocidos en el sitio, por ejemplo: Odkryj Auto, Record Go. El autobús al pueblo circula raramente, pero directamente o vía Murcia.",
+        "secondPart": "También hay transferencias y alquileres de coches (Viva Cars, !Hola!, Alicante Taxi, Calma). Contacto a través de WhatsApp o Messenger. Después de aterrizar, dirígete al nivel superior del aeropuerto, donde generalmente esperarás el coche en Starbucks."
       }
     },
     "slider": {

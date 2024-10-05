@@ -17,6 +17,7 @@ export default function OcolicaPlaces() {
   const currPage = search.get('page')!;
 
   function paginationHandler(searchParam: number) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     search.set('page', `${searchParam}`);
     setSearch(search, {
       replace: true,

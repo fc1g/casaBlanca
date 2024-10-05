@@ -26,6 +26,10 @@ function AboutTabs() {
           <Tab data={2} active={active} onClick={setActive}>
             {t('about.infoBtn.rentInfo')}
           </Tab>
+
+          <Tab data={3} active={active} onClick={setActive}>
+            Transfer
+          </Tab>
         </ul>
       </div>
 
@@ -35,12 +39,14 @@ function AboutTabs() {
             {active === 0 && t('about.infoText.house.firstPart')}
             {active === 1 && t('about.infoText.vicinity.firstPart')}
             {active === 2 && t('about.infoText.rentInfo.firstPart')}
+            {active === 3 && t('about.infoText.transfer.firstPart')}
           </p>
 
           <p className="mt-4 block max-w-4xl">
             {active === 0 && t('about.infoText.house.secondPart')}
             {active === 1 && t('about.infoText.vicinity.secondPart')}
             {active === 2 && t('about.infoText.rentInfo.secondPart')}
+            {active === 3 && t('about.infoText.transfer.secondPart')}
           </p>
         </>
       </TabContent>

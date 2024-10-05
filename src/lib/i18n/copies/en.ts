@@ -88,6 +88,10 @@ const en = JSON.parse(`{
       "rentInfo": {
         "firstPart": "It's worth mentioning that we are on both Booking and Airbnb. If you don't feel confident, you can book the property through these two services. However, to save money, feel free to book directly with us by sending a message or giving us a call to arrange the dates.",
         "secondPart": "Once you are ready to make a reservation, contact Mrs. Anita Kołodziejczyk. She is responsible for your booking and will be on-site to assist you with your reservation."
+      },
+      "transfer": {
+        "firstPart": "You can rent a car from the airport. I can recommend companies or you can choose a car from well-known rentals on site, for example: Odkryj Auto, Record Go. The bus to the town runs infrequently but directly or via Murcia.",
+        "secondPart": "Transfers and car rentals (Viva Cars, !Hola!, Alicante Taxi, Calma) are also available. Contact via WhatsApp or Messenger. After landing, head to the airport's upper level, where you'll usually wait for the car at Starbucks."
       }
     },
     "slider": {
